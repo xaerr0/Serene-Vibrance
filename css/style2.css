@@ -1,0 +1,105 @@
+:root {
+    --font-family-sans-serif: "Poppins", sans-serif;
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #757575;
+    text-align: left;
+    background-color: #fff;
+  }
+
+
+  /** TopBar **/
+.topbar {
+    background-color: #ffe5df;
+    color: white;
+    padding: 0px 0;
+}
+
+.topbar a {
+    color: #F9A392;
+    text-decoration: none;
+    padding: 0 px;
+}
+
+.topbar a:hover {
+    color: #ffc107;
+}
+
+.topbar .d-inline-flex {
+    align-items: center;
+}
+
+.topbar .d-inline-flex a {
+    padding: 0 5px;
+}
+
+.topbar .d-inline-flex a:hover {
+    color: #ffc107;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 30px;
+    margin: 0 10px;
+}
+
+.social-icons a {
+    margin: 0 10px; /* Add spacing between each icon */
+    position: relative;
+    bottom: 10px; /* Adjust this value to move the social links up */
+}
+
+.info {
+    padding: 0 0 0 30px;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: lighter;
+
+}
+
+small {
+    color: #666; /* Example text color */
+    font-weight: bold; /* Example font weight */
+    margin: 0 10px; 
+    position: relative;
+    top: 10px; /* Adjust this value to move the content down */
+}
+
+.custom-icon-spacing {
+    margin-right: 10px; /* Adjust the value as needed */
+}
+
+
+/** Navbar **/
+.text-primary {
+    color: #F9A392 !important;
+  }
+
+  .text-dark {
+    color: #211E1C !important;
+  }
+
+  .navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+  }
+
+  @media (max-width: 575.98px) {
+    .navbar-expand-sm > .container,
+    .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
