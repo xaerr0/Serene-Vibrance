@@ -927,6 +927,17 @@ small {
   }
 }
 
+.bg-jumbotron {
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/carousel-3.jpg), no-repeat center center;
+  background-size: cover;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+}
+
 .flex-column {
   flex-direction: column !important;
 }
@@ -1359,6 +1370,25 @@ h6,
   z-index: 1;
 }
 
+.service-item-peels .service-text {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 275px);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: rgba(33, 30, 28, 0.5);
+  transition: .5s;
+  z-index: 1;
+}
+
+.service-item-peels:hover .service-text {
+  height: calc(100% + 20px);
+}
+
 .service-item:hover img {
   margin-top: 0px;
 }
@@ -1456,10 +1486,6 @@ h6,
   background: #F9A392;
 }
 
-.owl-stage-outer {
-  height: 200px;
-}
-
 
 /** About Kristen **/
 .about-kristen {
@@ -1481,4 +1507,8 @@ h6,
 
 .kristen-photo {
   transform: scaleX(-1);
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
 }
