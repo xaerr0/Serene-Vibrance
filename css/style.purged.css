@@ -49,6 +49,7 @@ nav {
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 400;
@@ -57,6 +58,7 @@ body {
   text-align: left;
   background-color: #fff;
 }
+
 
 h1, h3, h4, h5, h6 {
   margin-top: 0;
@@ -1370,24 +1372,7 @@ h6,
   z-index: 1;
 }
 
-.service-item-peels .service-text {
-  position: absolute;
-  width: 100%;
-  height: calc(100% + 275px);
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  background: rgba(33, 30, 28, 0.5);
-  transition: .5s;
-  z-index: 1;
-}
 
-.service-item-peels:hover .service-text {
-  height: calc(100% + 20px);
-}
 
 .service-item:hover img {
   margin-top: 0px;
@@ -1491,7 +1476,7 @@ h6,
 .about-kristen {
   position: relative;
   background-size: cover;
-  right: -80px;
+ 
   z-index: 2;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -1511,4 +1496,61 @@ h6,
 
 .nav-item.dropdown:hover .dropdown-menu {
   display: block;
+}
+
+
+/* Services Page */
+.service-carousel-peels .service-item-peels {
+  height: 400px; /* Adjust the height as needed */
+}
+
+.service-carousel-peels .service-item-peels img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-carousel-peels .service-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.service-item-peels .service-text {
+  position: absolute;
+  width: 100%;
+  height: calc(100% + 275px);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: rgba(33, 30, 28, 0.5);
+  transition: .5s;
+  z-index: 1;
+}
+
+.service-item-peels:hover .service-text {
+  height: calc(100% + 20px);
+}
+
+.peels-container{
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.peach-background {
+  background-color: #FEF1EF ; /* Peach color */
+  width: 100%;
+  padding: 30px 0; /* Adjust padding as needed */
 }
