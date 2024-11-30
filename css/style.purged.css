@@ -1504,8 +1504,14 @@ h6,
   height: 400px; /* Adjust the height as needed */
 }
 
-.service-carousel-peels .service-item-peels img {
-  height: 100%;
+.service-carousel-peels .service-item {
+  width: 500px;
+  height: 600px;
+}
+
+.service-carousel-peels .service-item img {
+  width: 100% !important;
+  height: 100% !important;
   object-fit: cover;
 }
 
