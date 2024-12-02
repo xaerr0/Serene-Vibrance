@@ -36,34 +36,39 @@
   <body>
     <!-- Topbar Start -->
     <div class="container-fluid bg-light d-none d-lg-block">
-        <div class="row py-2 px-lg-5">
-            <div class="col-lg-6 text-left mb-2 mb-lg-0">
-                <div class="d-inline-flex align-items-center">
-                    <small><i class="fa fa-phone-alt mr-2"></i>(415) 430 - 8476</small>
-                    <small class="px-3">|</small>
-                    <small><i class="fa fa-envelope mr-2"></i>rejuvenatingyourskin@gmail.com</small>
-                </div>
-            </div>
-            <div class="col-lg-6 text-right">
-                <div class="d-inline-flex align-items-center">
-                    <a class="text-primary px-2" href="">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a class="text-primary px-2" href="">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a class="text-primary px-2" href="">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a class="text-primary px-2" href="">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a class="text-primary pl-2" href="">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                </div>
-            </div>
+      <div class="row py-2 px-lg-5">
+        <div class="col-lg-6 text-left mb-2 mb-lg-0">
+          <div class="d-inline-flex align-items-center">
+            <small><i class="fa fa-phone-alt mr-2"></i>(415) 430 - 8476</small>
+            <small class="px-3">|</small>
+            <small>
+              <i class="fa fa-envelope mr-2"></i>
+              <a href="mailto:rejuvenatingyourskin@gmail.com"
+                >rejuvenatingyourskin@gmail.com</a
+              >
+            </small>
+          </div>
         </div>
+        <div class="col-lg-6 text-right">
+          <div class="d-inline-flex align-items-center">
+            <a class="text-primary px-2" href="">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a class="text-primary px-2" href="">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a class="text-primary px-2" href="">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a class="text-primary px-2" href="">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a class="text-primary pl-2" href="">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Topbar End -->
 
@@ -94,6 +99,18 @@
             <a href="about.html" class="nav-item nav-link">About</a>
             <a href="service.html" class="nav-item nav-link">Services</a>
             <a href="price.html" class="nav-item nav-link">Pricing</a>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-toggle="dropdown"
+                >Services</a
+              >
+              <div class="dropdown-menu rounded-0 m-0">
+                <a href="blog.html" class="dropdown-item">Blog</a>
+                <a href="blog-single.html" class="dropdown-item">Blog Single</a>
+              </div>
+            </div>
             <div class="nav-item dropdown">
               <a
                 href="#"
@@ -163,11 +180,11 @@
                   lights.
                 </p>
                 <a
-                class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
-                href="https://www.vagaro.com/serenevibrancelafayette/book-now"
-                target="_blank"
-                >Make Appointment</a
-              >
+                  class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
+                  href="https://www.vagaro.com/serenevibrancelafayette/book-now"
+                  target="_blank"
+                  >Make Appointment</a
+                >
               </div>
             </div>
           </div>
@@ -293,16 +310,17 @@
         </div>
       </div>
       <div class="owl-carousel service-carousel">
-         <div class="service-item position-relative">
+        <div class="service-item position-relative">
           <img class="img-fluid" src="img/service-1.jpg" alt="" />
           <div class="service-text text-center">
             <h4 class="text-white font-weight-medium px-3">Coaching</h4>
             <p class="text-white px-3 mb-3">
-              Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor
-              duo sit ipsum
+              With Serene Vibrance Intuitive Coaching, I will support you to
+              connect to your passion, find fulfillment, and fall in love with
+              yourself and your life
             </p>
             <div class="w-100 bg-white text-center p-4">
-              <a id="btnBook" class="service-link flamingo-button book-now" href="javascript:void(0);" onclick="_shopdetail.OpenAddOnServicePopupForBookNow('25927657', 0, '1', 'Intuitive Coaching 60 minutes', '', '$110', '', 0, this, 'false', '0' ,'0', '', '', 'true', '0', '', '','false')" role="button">Book Now</a>
+              <a class="btn btn-primary" href="">More Info</a>
             </div>
           </div>
         </div>
@@ -311,11 +329,11 @@
           <div class="service-text text-center">
             <h4 class="text-white font-weight-medium px-3">Facials</h4>
             <p class="text-white px-3 mb-3">
-              Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor
-              duo sit ipsum
+              Treat yourself to a relaxing facial that cleanses, nourishes, and
+              refreshes your skin, leaving you with a radiant and youthful glow.
             </p>
             <div class="w-100 bg-white text-center p-4">
-              <a class="btn btn-primary" href="">Make Order</a>
+              <a class="btn btn-primary" href="">More Info</a>
             </div>
           </div>
         </div>
@@ -324,11 +342,12 @@
           <div class="service-text text-center">
             <h4 class="text-white font-weight-medium px-3">Peels</h4>
             <p class="text-white px-3 mb-3">
-              Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor
-              duo sit ipsum
+              Indulge in a rejuvenating spa experience with a soothing peel that
+              exfoliates and revitalizes your skin for a fresh, glowing
+              complexion.
             </p>
             <div class="w-100 bg-white text-center p-4">
-              <a class="btn btn-primary" href="">Make Order</a>
+              <a class="btn btn-primary" href="">More Info</a>
             </div>
           </div>
         </div>
@@ -337,11 +356,11 @@
           <div class="service-text text-center">
             <h4 class="text-white font-weight-medium px-3">Waxing</h4>
             <p class="text-white px-3 mb-3">
-              Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor
-              duo sit ipsum
+              Experience smooth, silky skin with a professional waxing treatment
+              that removes unwanted hair and leaves your body feeling flawless.
             </p>
             <div class="w-100 bg-white text-center p-4">
-              <a class="btn btn-primary" href="">Make Order</a>
+              <a class="btn btn-primary" href="">More Info</a>
             </div>
           </div>
         </div>
@@ -350,24 +369,13 @@
           <div class="service-text text-center">
             <h4 class="text-white font-weight-medium px-3">Additions</h4>
             <p class="text-white px-3 mb-3">
-              Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor
-              duo sit ipsum
+              Enhance your treatment with luxurious additions like the Multi Eye
+              Step, Reiki healing, LED light therapy, extractions, Revita Pen,
+              or soothing hand and foot therapy for deeper relaxation and
+              results.
             </p>
             <div class="w-100 bg-white text-center p-4">
-              <a class="btn btn-primary" href="">Make Order</a>
-            </div>
-          </div>
-        </div>
-        <div class="service-item position-relative">
-          <img class="img-fluid" src="img/service-6.jpg" alt="" />
-          <div class="service-text text-center">
-            <h4 class="text-white font-weight-medium px-3">Face Masking</h4>
-            <p class="text-white px-3 mb-3">
-              Elitr labore sit dolor erat est lorem diam sea ipsum diam dolor
-              duo sit ipsum
-            </p>
-            <div class="w-100 bg-white text-center p-4">
-              <a class="btn btn-primary" href="">Make Order</a>
+              <a class="btn btn-primary" href="">More Info</a>
             </div>
           </div>
         </div>
@@ -515,43 +523,44 @@
       </div>
     </div>
 
-
-   <!-- About Kristen Start -->
+    <!-- About Kristen Start -->
     <!-- Need to fix mobile layout for this section-->
-<div class="container-fluid py-5">
-    <div class="container py-5 ">
-      <div class="row">
-        <div class="col-lg-6 pt-5 pb-lg-5 position-relative">
-          <div class="about-kristen bg-light p-4 p-lg-5 my-lg-5">
-            <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">
-              About Kristen
-            </h6>
-            <h1 class="mb-4">Ever since I was young...</h1>
-            <p>
-              I have wanted to really know people, to connect with them in a
-              meaningful way. I have had the unique opportunity to do that
-              both as an esthetician, a women's retreat fascilitator, and as
-              an intuitive life coach. I've had the joy of hearing hundreds of
-              people's deepest thoughts and beautiful life stories. Please
-              visit my intuitive coaching website to learn more about those
-              sessions as well.
-            </p>
-            <a href="about.html" class="btn btn-primary mt-2">Read more</a>
+    <div class="container-fluid py-5">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-6 pt-5 pb-lg-5 position-relative">
+            <div class="about-kristen bg-light p-4 p-lg-5 my-lg-5">
+              <h6
+                class="d-inline-block text-white text-uppercase bg-primary py-1 px-2"
+              >
+                About Kristen
+              </h6>
+              <h1 class="mb-4">Ever since I was young...</h1>
+              <p>
+                I have wanted to really know people, to connect with them in a
+                meaningful way. I have had the unique opportunity to do that
+                both as an esthetician, a women's retreat fascilitator, and as
+                an intuitive life coach. I've had the joy of hearing hundreds of
+                people's deepest thoughts and beautiful life stories. Please
+                visit my intuitive coaching website to learn more about those
+                sessions as well.
+              </p>
+              <a href="about.html" class="btn btn-primary mt-2">Read more</a>
+            </div>
           </div>
-        </div>
-        <div class="col-lg-6" style="min-height: 500px">
-          <div class="position-relative h-100">
-            <img
-              class="kristen-photo position-absolute w-100 h-100"
-              src="img/petalumasunshinesmileme_orig.jpg"
-              style="object-fit: cover"
-            />
+          <div class="col-lg-6" style="min-height: 500px">
+            <div class="position-relative h-100">
+              <img
+                class="kristen-photo position-absolute w-100 h-100"
+                src="img/petalumasunshinesmileme_orig.jpg"
+                style="object-fit: cover"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- About Kristen End -->
+    <!-- About Kristen End -->
 
     <!-- Team End -->
 
@@ -767,9 +776,7 @@
             </p>
           </div>
           <div class="col-md-6 text-center text-md-right">
-            <p class="m-0 text-white">
-              Designed by <a href="">Danny Brown</a>
-            </p>
+            <p class="m-0 text-white">Designed by <a href="">Danny Brown</a></p>
           </div>
         </div>
       </div>
