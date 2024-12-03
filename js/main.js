@@ -17,8 +17,8 @@
         toggleNavbarMethod();
         $(window).resize(toggleNavbarMethod);
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -51,7 +51,7 @@
 
     // Service carousel
     $(".service-carousel").owlCarousel({
-        autoplay: true,
+        autoplay: false,
         smartSpeed: 1500,
         loop: true,
         dots: false,
@@ -70,11 +70,10 @@
                 items:4
             },
             1200:{
-                items:5
+                items:4
             }
         }
     });
-
      // Service carousel
 $(".service-carousel-peels").owlCarousel({
     autoplay: true,
