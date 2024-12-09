@@ -54,8 +54,38 @@
         autoplay: false,
         smartSpeed: 1500,
         loop: true,
-        dots: false,
-        nav : false,
+        dots: true,
+        nav : true,
+        navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"], // Custom navigation text (arrows)
+        dots: true,
+        responsive: {
+            0:{
+                items:1
+            },
+            576:{
+                items:2
+            },
+            768:{
+                items:3
+            },
+            992:{
+                items:4
+            },
+            1200:{
+                items:4
+            }
+        }
+    });
+
+
+    $(".service-carousel-coaching").owlCarousel({
+        autoplay: false,
+        smartSpeed: 1500,
+        loop: true,
+        nav : true,
+        navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"], // Custom navigation text (arrows)
+        dots: true,
+        items: 7,
         responsive: {
             0:{
                 items:1
@@ -80,7 +110,7 @@ $(".service-carousel-peels").owlCarousel({
     smartSpeed: 1500,
     margin: 30,
     loop: true,
-    dots: false,
+    dots: true,
     nav: false,
     responsive: {
       0: {
@@ -107,7 +137,7 @@ $(".service-carousel-peels").owlCarousel({
         smartSpeed: 1500,
         margin: 30,
         loop: true,
-        dots: false,
+        dots: true,
         nav : false,
         responsive: {
             0:{

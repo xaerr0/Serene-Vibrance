@@ -1622,6 +1622,43 @@ h6,
   z-index: 1;
 }
 
+.owl-nav .owl-prev, .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  border-radius: 70%;
+  cursor: pointer;
+}
+
+.owl-nav .owl-prev {
+  left: 10px;
+}
+
+.owl-nav .owl-next {
+  right: 10px;
+}
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.owl-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.owl-dot.active {
+  background: #000;
+}
 
 /** Coaching Carousel **/
 .service-item-coaching .service-text {
