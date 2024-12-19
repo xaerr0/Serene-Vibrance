@@ -974,8 +974,9 @@ small {
 }
 
 .bg-jumbotron {
-  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/carousel-3.jpg), no-repeat center center;
+  background: linear-gradient(rgba(33, 30, 28, 0.7), rgba(33, 40, 28, 0.7)), url(../img/coaching/6aa0ab2d-c64c-42c5-8389-a14c07bb3dd9.webp), no-repeat center center;
   background-size: cover;
+
 }
 
 .jumbotron {
