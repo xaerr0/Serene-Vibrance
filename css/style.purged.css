@@ -1130,6 +1130,10 @@ small {
   padding: 1rem !important;
 }
 
+.p-35 {
+  padding: .8rem !important;
+}
+
 .py-3 {
   padding-top: 1rem !important;
 }
@@ -1405,7 +1409,7 @@ h6,
 .service-item .service-text {
   position: absolute;
   width: 100%;
-  height: calc(100% + 86px);
+  height: calc(100% + 66px);
   top: 0;
   left: 0;
   display: flex;
@@ -1595,6 +1599,7 @@ h6,
   object-fit: cover;
 }
 
+
 .service-carousel-peels .service-text {
   position: absolute;
   top: 0;
@@ -1662,10 +1667,22 @@ h6,
 }
 
 /** Coaching Carousel **/
+
+
+
+
+
+
+.service-item-coaching img {
+  position: relative;
+  margin-top: 40px;
+  transition: .5s;
+}
+
 .service-item-coaching .service-text {
   position: absolute;
   width: 100%;
-  height: calc(100% + 16rem);
+  height: calc(100% + 246px);
   top: 0;
   left: 0;
   display: flex;
@@ -1678,13 +1695,29 @@ h6,
 }
 
 
+
+.service-item-coaching:hover img {
+  margin-top: 0px;
+}
+
 .service-item-coaching:hover .service-text {
+  height: calc(100% + 40px);
+}
+
+
+
+
+
+
+
+
+/* .service-item-coaching:hover .service-text {
   height: calc(100% + 1.275rem);
 }
 
 .service-item-coaching .custom-service-text {
-  height: calc(100% + 12.5rem); /* Additional style */
-}
+  height: calc(100% + 10.5rem); 
+} */
 
 @media (min-width: 576px) {
   .container {
@@ -1706,18 +1739,18 @@ h6,
 
 @media (min-width: 1200px) {
 
-  .service-item-coaching .service-text {
+  /* .service-item-coaching .service-text {
     height: calc(100% + 19rem);
   }
 
   .service-item-coaching .custom-service-text {
-    height: calc(100% + 10rem); /* Additional style */
-  }
-}
+    height: calc(100% + 10rem); /* Additional style 
+  } */
+} 
 
 
 .service-item-peels:hover .service-text {
-  height: calc(100% + 02em);
+  height: calc(100% + 2em);
 }
 
 .peels-container{
