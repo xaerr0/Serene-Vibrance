@@ -84,26 +84,42 @@
         loop: true,
         nav : true,
         navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"], // Custom navigation text (arrows)
-        dots: true,
+        dots: false,
         items: 7,
         responsive: {
-            0:{
-                items:1
+            0: {
+                items: 1
             },
-            576:{
-                items:2
+            576: {
+                items: 2
             },
-            768:{
-                items:3
+            768: {
+                items: 3
             },
-            992:{
-                items:4
+            992: {
+                items: 4
             },
-            1200:{
-                items:4
+            1200: {
+                items: 4
+            },
+            1400: {
+                items: 5
+            },
+            1600: {
+                items: 5
+            },
+            1800: {
+                items: 5
+            },
+            2000: {
+                items: 6
             }
         }
     });
+
+
+
+
      // Service carousel
 $(".service-carousel-peels").owlCarousel({
     autoplay: true,
@@ -127,7 +143,8 @@ $(".service-carousel-peels").owlCarousel({
       },
       1200: {
         items: 2
-      }
+      },
+      
     }
   });
 
