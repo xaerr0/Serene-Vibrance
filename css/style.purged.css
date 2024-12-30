@@ -1752,13 +1752,19 @@ h6,
     max-width: 1140px;
   }
   .coaching-padding {
-    padding: 2rem;
+    padding: 1.9rem;
   }
   .coaching-padding-md {
-    padding: 40.4px;
+    padding: 2.2rem;
+  }
+  .coaching-padding-md2 {
+    padding: 2.9rem;
+  }
+  .coaching-padding-lg {
+    padding: 3.7rem;
   }
   .service-item-coaching .service-text {
-    height: calc(100% + 316px);
+    height: calc(100% + 41px);
   }
 }
 
