@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Intuitive Coaching — Serene Vibrance, Lafayette, CA</title>
+    <title>Professional Waxing — Serene Vibrance, Lafayette, CA</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -186,14 +186,14 @@
         text-align: center;
         padding: 80px 40px;
         overflow: hidden;
-        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+        background: linear-gradient(135deg, var(--coral) 0%, var(--coral-soft) 100%);
       }
 
       .hero::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(circle at 0% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        background: radial-gradient(circle at 100% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
         z-index: 0;
       }
 
@@ -304,9 +304,32 @@
         margin-top: 20px;
       }
 
-      .featured-service {
+      .why-section {
         padding: 100px 40px;
         background: linear-gradient(180deg, var(--cream) 0%, white 100%);
+      }
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .why-item h3 {
+        margin-bottom: 16px;
+        color: var(--coral);
+      }
+
+      .why-item p {
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .featured-service {
+        padding: 100px 40px;
+        background: white;
       }
 
       .featured-wrapper {
@@ -340,7 +363,7 @@
 
       .cta-section {
         padding: 100px 40px;
-        background: linear-gradient(135deg, var(--coral) 0%, var(--coral-soft) 100%);
+        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
         color: white;
         text-align: center;
         position: relative;
@@ -351,7 +374,7 @@
         content: "";
         position: absolute;
         top: -50%;
-        right: -10%;
+        left: -10%;
         width: 600px;
         height: 600px;
         background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
@@ -380,7 +403,7 @@
 
       .cta-section .btn-secondary {
         background: white;
-        color: var(--coral);
+        color: var(--sage);
         border-color: white;
       }
 
@@ -468,7 +491,7 @@
         h1 { font-size: 36px; }
         h2 { font-size: 28px; }
 
-        .services-grid, .featured-wrapper {
+        .services-grid, .why-grid, .featured-wrapper {
           grid-template-columns: 1fr;
           gap: 40px;
         }
@@ -478,7 +501,7 @@
         }
 
         .hero { padding: 60px 20px; min-height: 70vh; }
-        .services, .featured-service, .cta-section {
+        .services, .why-section, .featured-service, .cta-section {
           padding: 60px 20px;
         }
 
@@ -528,58 +551,91 @@
 
     <section class="hero">
       <div class="hero-content">
-        <p class="hero-subtitle">Transform Your Life From Within</p>
-        <h1>Intuitive Coaching</h1>
+        <p class="hero-subtitle">Smooth Skin, Confidence</p>
+        <h1>Professional Waxing</h1>
         <p>
-          Real change goes deeper than skincare. In coaching sessions (virtual or in-person),
-          we'll explore what's holding you back, what you actually want, and how to get there.
+          Smooth skin, zero fuss. From brows to legs, we handle it all with care and precision
+          so you can feel confident in your own skin.
         </p>
         <div class="hero-ctas">
-          <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-secondary">Schedule a Session</a>
-          <a href="#services" class="btn btn-secondary">Explore Options</a>
+          <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-secondary">Book Your Wax</a>
+          <a href="#menu" class="btn btn-secondary">View Menu</a>
         </div>
       </div>
     </section>
 
-    <section class="services" id="services">
+    <section class="services" id="menu">
       <div class="container">
         <div class="section-header">
-          <h2>Coaching Services</h2>
-          <p>Choose the session type that works best for your needs and schedule.</p>
+          <h2>Waxing Services</h2>
+          <p>Professional waxing customized to your needs and preferences.</p>
         </div>
         <div class="services-grid">
           <div class="service-card">
-            <h3>Free Intro Session</h3>
-            <p>Not sure if coaching is for you? Start here.</p>
+            <h3>Facial Waxing</h3>
+            <p>Perfect brows and clear skin.</p>
             <ul>
-              <li>30 minutes</li>
-              <li>Virtual or in-person</li>
-              <li>Get a feel for our process</li>
-            </ul>
-            <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Free Session</a>
-          </div>
-
-          <div class="service-card">
-            <h3>Single Coaching Session</h3>
-            <p>Deep, personalized guidance tailored to you.</p>
-            <ul>
-              <li>90 minutes</li>
-              <li>Virtual or in-person</li>
-              <li>Dive into your goals</li>
-              <li>$164</li>
+              <li>Eyebrow shaping</li>
+              <li>Upper lip & chin</li>
+              <li>Full face design</li>
             </ul>
             <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Now</a>
           </div>
 
           <div class="service-card">
-            <h3>Half-Day Retreat</h3>
-            <p>Coaching + spa treatment for total wellness.</p>
+            <h3>Body Waxing</h3>
+            <p>Smooth, hair-free skin for all body areas.</p>
             <ul>
-              <li>90-min coaching + facial</li>
-              <li>Nourishing tea & snacks</li>
-              <li>Starting at $445</li>
+              <li>Arms & underarms</li>
+              <li>Legs & thighs</li>
+              <li>Back & chest</li>
             </ul>
             <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Now</a>
+          </div>
+
+          <div class="service-card">
+            <h3>Bikini & Brazilian</h3>
+            <p>Gentle, professional care in sensitive areas.</p>
+            <ul>
+              <li>Bikini line</li>
+              <li>Brazilian wax</li>
+              <li>Custom designs</li>
+            </ul>
+            <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Professional Waxing?</h2>
+          <p>Smooth results that last longer than shaving.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-item">
+            <h3>Lasting Results</h3>
+            <p>
+              Professional waxing removes hair from the root, giving you smooth skin
+              that lasts 4-6 weeks. No daily maintenance needed.
+            </p>
+          </div>
+
+          <div class="why-item">
+            <h3>Expert Care</h3>
+            <p>
+              Our esthetician uses professional-grade wax and gentle techniques to
+              minimize irritation and maximize your comfort.
+            </p>
+          </div>
+
+          <div class="why-item">
+            <h3>Confidence</h3>
+            <p>
+              Feel confident in your own skin. Professional waxing gives you smooth,
+              polished results that make you feel great.
+            </p>
           </div>
         </div>
       </div>
@@ -589,19 +645,18 @@
       <div class="featured-wrapper">
         <div class="featured-image"></div>
         <div class="featured-content">
-          <h2>What Is Intuitive Coaching?</h2>
+          <h2>Expert Esthetician Care</h2>
           <p>
-            Think of it as a conversation with someone who gets it. We don't just talk about surface-level
-            issues—we dig deeper to explore what's really holding you back from living the life you want.
+            With years of experience in professional waxing, we provide gentle,
+            effective hair removal services tailored to your specific needs and skin type.
           </p>
           <p>
-            Whether you're stuck, overwhelmed, or just ready for something different, coaching can help you
-            get clarity, shift old patterns, and step into your power. Every session is personalized and
-            designed specifically for you.
+            We use premium waxing products and techniques to ensure smooth results
+            while minimizing discomfort. Whether it's your first time or you're a regular,
+            you'll feel cared for from start to finish.
           </p>
           <p style="margin-bottom: 0;">
-            Based on over 20 years of experience and training in holistic wellness, intuitive guidance,
-            and life coaching, Kristen brings real expertise and authentic care to every session.
+            Let us help you feel confident and beautiful in your own skin.
           </p>
         </div>
       </div>
@@ -609,12 +664,12 @@
 
     <section class="cta-section">
       <div class="cta-content">
-        <h2>Ready to Transform Your Life?</h2>
+        <h2>Ready for Smooth Skin?</h2>
         <p>
-          Start with a free intro session, then choose the package that feels right for you.
-          Virtual or in-person—you choose.
+          Book your waxing appointment today and experience professional care
+          that leaves your skin silky smooth.
         </p>
-        <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-secondary">Schedule Your Session</a>
+        <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-secondary">Book Your Appointment</a>
       </div>
     </section>
 

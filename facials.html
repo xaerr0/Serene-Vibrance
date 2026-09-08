@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expert Facials — Serene Vibrance, Lafayette, CA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --coral: #f9a392;
+        --coral-soft: #fab5aa;
+        --sage: #a68b9c;
+        --sage-light: #c4b4bf;
+        --cream: #fef1ef;
+        --dark: #211e1c;
+        --text-light: #6b6561;
+        --divider: #e8d4cc;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--cream);
+        color: var(--dark);
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img, svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: inherit;
+        transition: color 0.3s ease;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: "Lora", serif;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--dark);
+      }
+
+      h1 { font-size: 56px; }
+      h2 { font-size: 42px; }
+      h3 { font-size: 28px; }
+
+      p {
+        font-size: 16px;
+        color: var(--text-light);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 4px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--coral) 0%, var(--coral-soft) 100%);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(249, 163, 146, 0.3);
+      }
+
+      .btn-secondary {
+        background: white;
+        color: var(--coral);
+        border: 2px solid var(--coral);
+      }
+
+      .btn-secondary:hover {
+        background: var(--cream);
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(254, 241, 239, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(232, 212, 204, 0.3);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-family: "Lora", serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-light);
+        position: relative;
+        padding-bottom: 4px;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--coral);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-links a.active::after {
+        width: 100%;
+        background: var(--coral);
+      }
+
+      .nav-links a.active {
+        color: var(--coral);
+        font-weight: 600;
+      }
+
+      .nav-cta {
+        display: flex;
+        gap: 16px;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 40px;
+        overflow: hidden;
+        background-image: url('Images/facials-hero.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 100%);
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+      }
+
+      .hero-subtitle {
+        font-family: "Lora", serif;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+
+      .hero h1 {
+        margin-bottom: 24px;
+        color: white;
+      }
+
+      .hero p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-ctas {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .services {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 80px;
+      }
+
+      .section-header h2 {
+        margin-bottom: 16px;
+      }
+
+      .section-header p {
+        font-size: 18px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .menu-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 1000px;
+        margin: 40px auto;
+      }
+
+      .menu-column ul {
+        list-style: none;
+      }
+
+      .menu-column li {
+        padding: 16px 0;
+        padding-left: 24px;
+        position: relative;
+        font-size: 16px;
+        color: var(--text-light);
+        line-height: 1.6;
+        border-bottom: 1px solid var(--divider);
+      }
+
+      .menu-column li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--coral);
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .menu-column li:last-child {
+        border-bottom: none;
+      }
+
+      .featured-service {
+        padding: 100px 40px;
+        background: linear-gradient(180deg, var(--cream) 0%, white 100%);
+      }
+
+      .featured-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .featured-image {
+        border-radius: 12px;
+        overflow: hidden;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("Images/treatment-room.jpg");
+        box-shadow: 0 20px 60px rgba(249, 163, 146, 0.15);
+      }
+
+      .featured-content h2 {
+        margin-bottom: 24px;
+      }
+
+      .featured-content p {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .service-highlights {
+        list-style: none;
+        margin: 32px 0;
+      }
+
+      .service-highlights li {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 12px;
+        font-size: 15px;
+      }
+
+      .service-highlights li::before {
+        content: "✨";
+        flex-shrink: 0;
+        color: var(--coral);
+      }
+
+      .features {
+        padding: 100px 40px;
+        background: linear-gradient(135deg, var(--coral) 0%, var(--coral-soft) 100%);
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .features::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      .features-grid {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .feature-item {
+        text-align: center;
+      }
+
+      .feature-item h3 {
+        color: white;
+        margin-bottom: 12px;
+        font-size: 22px;
+      }
+
+      .feature-item p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      .cta-section {
+        padding: 100px 40px;
+        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-section::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      .cta-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .cta-section h2 {
+        color: white;
+        margin-bottom: 24px;
+      }
+
+      .cta-section p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 32px;
+      }
+
+      .cta-section .btn-secondary {
+        background: white;
+        color: var(--sage);
+        border-color: white;
+      }
+
+      .cta-section .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      footer {
+        background: var(--dark);
+        color: #b0a89a;
+        padding: 60px 40px 40px;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 16px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .footer-col p {
+        font-size: 14px;
+        color: #b0a89a;
+        margin-bottom: 12px;
+      }
+
+      .footer-col a {
+        display: block;
+        font-size: 14px;
+        color: #b0a89a;
+        text-decoration: none;
+        margin-bottom: 8px;
+      }
+
+      .footer-col a:hover {
+        color: var(--coral);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        transition: background 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--coral);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #8b8377;
+      }
+
+      @media (max-width: 768px) {
+        nav, .container {
+          padding: 0 20px;
+        }
+
+        h1 { font-size: 36px; }
+        h2 { font-size: 28px; }
+
+        .menu-list, .featured-wrapper, .features-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .featured-image {
+          height: 300px;
+        }
+
+        .hero { padding: 60px 20px; min-height: 70vh; }
+        .services, .featured-service, .features, .cta-section {
+          padding: 60px 20px;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .nav-links {
+          gap: 20px;
+          font-size: 13px;
+        }
+
+        .hero-ctas {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-ctas .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          Serene <span style="color: var(--sage)">Vibrance</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="facials.html">Facials</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="waxing.html">Waxing</a></li>
+          <li><a href="elevate.html">Elevate</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="index.html#contact" class="btn btn-secondary">Contact</a>
+          <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-subtitle">Let Your Skin Breathe & Glow</p>
+        <h1>Expert Facials</h1>
+        <p>
+          From quick refreshers to comprehensive anti-aging treatments. Every facial is personalized
+          to what your skin needs right now. New clients get 20% off your first appointment.
+        </p>
+        <div class="hero-ctas">
+          <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Your Facial</a>
+          <a href="#menu" class="btn btn-secondary">Explore Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-service">
+      <div class="featured-wrapper">
+        <div class="featured-image"></div>
+        <div class="featured-content">
+          <h2>The Ooo La La Facial</h2>
+          <p>
+            Our most popular facial. In 60 minutes, you'll get professional-grade
+            treatments that smooth lines, brighten texture, and leave your skin
+            absolutely glowing. Perfect for anyone ready to love their complexion.
+          </p>
+          <ul class="service-highlights">
+            <li>Professional microdermabrasion</li>
+            <li>Deep extractions & hydration</li>
+            <li>Oxygen mist infusion</li>
+            <li>Microcurrent lifting therapy</li>
+            <li>LED light therapy</li>
+            <li>Luxe moisturizing mask</li>
+          </ul>
+          <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="menu">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Facial Menu</h2>
+          <p>
+            We customize every facial to your specific skin needs.
+            Each treatment is designed to help you feel refreshed and radiant.
+          </p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-column">
+            <ul>
+              <li>New Client Facial (20% off)</li>
+              <li>Short and Sweet</li>
+              <li>Absolutely Lovely</li>
+              <li>Ooo La La (Our Signature)</li>
+              <li>Sweet Escape</li>
+              <li>Two-Hour Facial</li>
+              <li>90-Minute Facial</li>
+              <li>Microchanneling Deluxe Facial Renewal</li>
+            </ul>
+          </div>
+          <div class="menu-column">
+            <ul>
+              <li>Banished Clear Skin LED Facial</li>
+              <li>Renewed LED Facial</li>
+              <li>Ultra Lift Treatment</li>
+              <li>Organic Arctic Berry Peel</li>
+              <li>Men's Hardy Skin Treatment</li>
+              <li>Polished</li>
+              <li>Birthday Facial</li>
+              <li>Custom Facial (Discuss with Kristen)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>Personalized</h3>
+          <p>Every facial is customized to your skin type and current needs.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Professional-Grade</h3>
+          <p>Advanced techniques and premium products for real, visible results.</p>
+        </div>
+        <div class="feature-item">
+          <h3>Relaxing</h3>
+          <p>A peaceful, nourishing experience from start to finish.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="cta-content">
+        <h2>Ready for Radiant Skin?</h2>
+        <p>
+          Book your facial today and experience the Serene Vibrance difference.
+          New clients receive 20% off your first appointment.
+        </p>
+        <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-secondary">Book Your Facial Now</a>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href').split('/').pop() || 'index.html';
+          if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Serene Vibrance</h4>
+          <p>Spa & Intuitive Coaching</p>
+          <p>Lafayette, California</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Serene-Vibrance-Intuitive-Coaching" target="_blank" title="Facebook">f</a>
+            <a href="https://www.instagram.com/coaching_serenevibrance/" target="_blank" title="Instagram">📷</a>
+            <a href="https://www.linkedin.com/in/kristen-irene-diaz-010937108" target="_blank" title="LinkedIn">in</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="facials.html">Facials</a>
+          <a href="coaching.html">Coaching</a>
+          <a href="waxing.html">Waxing</a>
+          <a href="elevate.html">Elevate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Offerings</h4>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="index.html#newsletter">Newsletter</a>
+          <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank">Book Online</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Serene Vibrance. Spa & Intuitive Coaching for Whole-Self Wellness.
+      </div>
+    </footer>
+  </body>
+</html>

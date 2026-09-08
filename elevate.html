@@ -1,0 +1,928 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elevate Program — Serene Vibrance, Lafayette CA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --coral: #f9a392;
+        --coral-soft: #fab5aa;
+        --sage: #a68b9c;
+        --sage-light: #c4b4bf;
+        --cream: #fef1ef;
+        --dark: #211e1c;
+        --text-light: #6b6561;
+        --divider: #e8d4cc;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--cream);
+        color: var(--dark);
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+
+      a {
+        color: inherit;
+        transition: color 0.3s ease;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      h1, h2, h3, h4 {
+        font-family: "Lora", serif;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--dark);
+      }
+
+      h1 {
+        font-size: 56px;
+      }
+
+      h2 {
+        font-size: 42px;
+      }
+
+      h3 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        color: var(--text-light);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 4px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background: var(--sage);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background: var(--sage-light);
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: white;
+        color: var(--sage);
+        border: 2px solid var(--sage);
+      }
+
+      .btn-secondary:hover {
+        background: var(--sage);
+        color: white;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(254, 241, 239, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(232, 212, 204, 0.3);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-family: "Lora", serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-light);
+        position: relative;
+        padding-bottom: 4px;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--coral);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-links a.active::after {
+        width: 100%;
+        background: var(--coral);
+      }
+
+      .nav-links a.active {
+        color: var(--coral);
+        font-weight: 600;
+      }
+
+      .nav-cta {
+        display: flex;
+        gap: 16px;
+      }
+
+      .hero {
+        padding: 120px 40px;
+        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+        background-image: url('Images/treatment-room.jpg'), linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+        background-blend-mode: overlay;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        color: white;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      .hero h1 {
+        color: white;
+        margin-bottom: 24px;
+      }
+
+      .hero p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 32px;
+      }
+
+      .hero-ctas {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-header h2 {
+        margin-bottom: 16px;
+      }
+
+      .section-header p {
+        font-size: 18px;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .overview {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .overview-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        max-width: 1100px;
+        margin: 0 auto;
+        align-items: center;
+      }
+
+      .overview-content h2 {
+        margin-bottom: 24px;
+      }
+
+      .overview-content p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+      }
+
+      .highlights {
+        padding: 100px 40px;
+        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+        color: white;
+      }
+
+      .highlights-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .highlight-card {
+        text-align: center;
+      }
+
+      .highlight-card h3 {
+        color: white;
+        margin-bottom: 16px;
+      }
+
+      .highlight-card p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 15px;
+      }
+
+      .whats-included {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .included-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 1000px;
+        margin: 40px auto;
+      }
+
+      .included-column ul {
+        list-style: none;
+      }
+
+      .included-column li {
+        padding: 12px 0;
+        padding-left: 28px;
+        position: relative;
+        font-size: 15px;
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+
+      .included-column li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--sage);
+        font-weight: 600;
+        font-size: 18px;
+      }
+
+      .facilitators {
+        padding: 100px 40px;
+        background: linear-gradient(135deg, var(--coral-soft) 0%, var(--coral) 100%);
+        color: white;
+      }
+
+      .facilitators-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 1000px;
+        margin: 40px auto;
+      }
+
+      .facilitator {
+        text-align: center;
+      }
+
+      .facilitator h3 {
+        color: white;
+        margin-bottom: 12px;
+      }
+
+      .facilitator-title {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.95);
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      .facilitator p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 15px;
+      }
+
+      .testimonials {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+        margin: 40px auto;
+        max-width: 1200px;
+      }
+
+      .testimonial-card {
+        background: var(--cream);
+        padding: 32px;
+        border-radius: 8px;
+        border-left: 4px solid var(--sage);
+      }
+
+      .stars {
+        font-size: 16px;
+        color: var(--sage);
+        margin-bottom: 16px;
+      }
+
+      .testimonial-card p {
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 16px;
+        font-style: italic;
+      }
+
+      .testimonial-credit {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      .program-details {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .details-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        max-width: 1100px;
+        margin: 40px auto;
+        align-items: start;
+      }
+
+      .detail-section h3 {
+        margin-bottom: 20px;
+        color: var(--sage);
+      }
+
+      .detail-section p {
+        margin-bottom: 16px;
+      }
+
+      .cta-section {
+        padding: 100px 40px;
+        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+        color: white;
+        text-align: center;
+      }
+
+      .cta-content {
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .cta-content h2 {
+        color: white;
+        margin-bottom: 24px;
+      }
+
+      .cta-content p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 18px;
+        margin-bottom: 32px;
+        line-height: 1.8;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .cta-buttons .btn-secondary {
+        background: white;
+        color: var(--sage);
+        border: none;
+      }
+
+      .cta-buttons .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.95);
+      }
+
+      footer {
+        background: var(--dark);
+        color: #b0a89a;
+        padding: 60px 40px 40px;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 16px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .footer-col p {
+        font-size: 14px;
+        color: #b0a89a;
+        margin-bottom: 12px;
+      }
+
+      .footer-col a {
+        display: block;
+        font-size: 14px;
+        color: #b0a89a;
+        text-decoration: none;
+        margin-bottom: 8px;
+      }
+
+      .footer-col a:hover {
+        color: var(--coral);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        transition: background 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--coral);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #8b8377;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          padding: 0 20px;
+        }
+
+        .hero {
+          padding: 60px 20px;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        h2 {
+          font-size: 28px;
+        }
+
+        .overview-grid,
+        .details-grid,
+        .facilitators-grid,
+        .included-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .highlights-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .section-header,
+        .overview,
+        .highlights,
+        .whats-included,
+        .facilitators,
+        .testimonials,
+        .program-details,
+        .cta-section {
+          padding: 60px 20px;
+        }
+
+        .hero-ctas,
+        .cta-buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          Serene <span style="color: var(--sage)">Vibrance</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="facials.html">Facials</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="waxing.html">Waxing</a></li>
+          <li><a href="elevate.html">Elevate</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="index.html#contact" class="btn btn-secondary">Contact</a>
+          <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Now</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-subtitle">3-Month Personal Growth Circle</p>
+        <h1>Elevate Your Life</h1>
+        <p>
+          A transformative women's program designed for those ready to step into
+          their highest potential, feel truly empowered, and create the life
+          they've always wanted.
+        </p>
+        <div class="hero-ctas">
+          <a href="#apply" class="btn btn-primary">Start Your Journey</a>
+          <a href="index.html#contact" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="overview">
+      <div class="overview-grid">
+        <div class="overview-content">
+          <h2>What is Elevate?</h2>
+          <p>
+            Elevate is a 3-month journey designed for heart-centered women who are
+            ready to step into their highest potential. This isn't about information
+            alone. It's about real, embodied transformation that shows up in your
+            life right now.
+          </p>
+          <p>
+            You'll experience weekly group coaching, two full-day retreats, facials,
+            massage, energy work, and a supportive community of women committed to
+            their own growth. By the end, you'll have clearer boundaries, stronger
+            relationships, deeper self-connection, and a life that actually feels
+            like yours.
+          </p>
+        </div>
+        <div class="overview-content">
+          <h2>Program Dates</h2>
+          <p style="font-size: 18px; font-weight: 600; color: var(--dark); margin-bottom: 8px;">
+            September 12 – December 5, 2026
+          </p>
+          <p>
+            Meeting at Serene Vibrance in Lafayette and Lafayette Reservoir for our
+            full-day retreat experiences.
+          </p>
+          <p style="margin-top: 32px; font-size: 15px;">
+            Limited to 12 women per cohort to ensure everyone receives personalized
+            attention and support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="container">
+        <div class="section-header">
+          <h2>What You'll Experience</h2>
+        </div>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <h3>Clarity</h3>
+            <p>
+              Identify limiting beliefs and patterns that have been holding you
+              back so you can move forward with confidence.
+            </p>
+          </div>
+          <div class="highlight-card">
+            <h3>Connection</h3>
+            <p>
+              Join a community of women committed to growth. Build authentic
+              relationships and support systems that last.
+            </p>
+          </div>
+          <div class="highlight-card">
+            <h3>Embodiment</h3>
+            <p>
+              Learn practical tools for emotional resilience, nervous system
+              regulation, and living in alignment with your values.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="whats-included">
+      <div class="container">
+        <div class="section-header">
+          <h2>What's Included</h2>
+          <p>Everything you need for a complete transformation experience</p>
+        </div>
+        <div class="included-grid">
+          <div class="included-column">
+            <ul>
+              <li>12 weeks of weekly group coaching calls</li>
+              <li>Two full-day in-person retreats</li>
+              <li>Professional facials and massage therapy</li>
+              <li>Reiki energy balancing sessions</li>
+              <li>Guided meditation and imagery work</li>
+              <li>Somatic movement practices</li>
+              <li>Holistic skincare products</li>
+            </ul>
+          </div>
+          <div class="included-column">
+            <ul>
+              <li>Hypnotherapy and subconscious rewiring</li>
+              <li>Release rituals and artistic expression</li>
+              <li>Nervous system regulation techniques</li>
+              <li>Private WhatsApp community support</li>
+              <li>Personalized coaching notes</li>
+              <li>Lifetime access to guided recordings</li>
+              <li>Certificate of completion</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="facilitators">
+      <div class="container">
+        <div class="section-header">
+          <h2>Meet Your Guides</h2>
+          <p>Experienced facilitators committed to your transformation</p>
+        </div>
+        <div class="facilitators-grid">
+          <div class="facilitator">
+            <h3>Kristen Irene</h3>
+            <p class="facilitator-title">Intuitive Coach & Holistic Esthetician</p>
+            <p>
+              With 20+ years in wellness and 18 years facilitating women's retreats,
+              Kristen brings expertise, warmth, and deep intuitive guidance to every
+              session. Her signature blend of skincare and coaching helps you feel
+              seen and supported.
+            </p>
+          </div>
+          <div class="facilitator">
+            <h3>Assiyah Rouhani</h3>
+            <p class="facilitator-title">Clinical Hypnotherapist & Guide</p>
+            <p>
+              Assiyah specializes in subconscious rewiring and nervous system work.
+              Her compassionate approach helps you release old patterns and step
+              into your authentic power.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Elevate Experiences</h2>
+          <p>Real stories from women who have transformed their lives</p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Elevate gave me tools I use every single day. It wasn't just a
+              workshop—it felt like a reset for my whole life."
+            </p>
+            <div class="testimonial-credit">Program Participant</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "My relationships transformed. I have boundaries now, and I'm not
+              afraid to ask for what I need. This program gave me permission to
+              prioritize myself."
+            </p>
+            <div class="testimonial-credit">Program Participant</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "The community was everything. Having other women to be honest with
+              and grow alongside made all the difference. We still support each
+              other."
+            </p>
+            <div class="testimonial-credit">Program Participant</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "I came in feeling lost and overwhelmed. Elevate helped me understand
+              myself in a completely new way. I feel peaceful for the first time in
+              years."
+            </p>
+            <div class="testimonial-credit">Program Participant</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "The blend of coaching, energy work, and physical care was perfect.
+              Kristen and Assiyah truly know what they're doing. This is an
+              investment in yourself that pays off forever."
+            </p>
+            <div class="testimonial-credit">Program Participant</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="program-details">
+      <div class="container">
+        <div class="section-header">
+          <h2>Program Details</h2>
+        </div>
+        <div class="details-grid">
+          <div class="detail-section">
+            <h3>Is Elevate Right for You?</h3>
+            <p>
+              You're a good fit if you're ready to invest in yourself and committed
+              to showing up for your transformation. You don't need to have coaching
+              experience—just a willingness to be honest and grow.
+            </p>
+            <p>
+              Elevate is designed for women who want more than information. You want
+              embodied change that shows up in your relationships, career, health,
+              and how you feel about yourself.
+            </p>
+          </div>
+          <div class="detail-section">
+            <h3>How to Apply</h3>
+            <p>
+              We take time to make sure Elevate is the right program for you. The
+              application process includes a brief form and a discovery call with
+              Kristen or Assiyah to discuss your goals and answer your questions.
+            </p>
+            <p>
+              Spots are limited to 12 women per cohort, so we can give everyone
+              the attention they deserve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="apply">
+      <div class="cta-content">
+        <h2>Ready to Elevate?</h2>
+        <p>
+          Take the first step toward the life you want. Fill out an application,
+          schedule a discovery call, and let's explore if Elevate is right for you.
+        </p>
+        <div class="cta-buttons">
+          <a
+            href="https://www.vagaro.com/serenevibrancelafayette/book-now"
+            target="_blank"
+            class="btn btn-secondary"
+            >Apply Now</a
+          >
+          <a href="mailto:serenevibrance@gmail.com" class="btn btn-secondary"
+            >Email Us</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href').split('/').pop() || 'index.html';
+          if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Serene Vibrance</h4>
+          <p>Spa & Intuitive Coaching</p>
+          <p>Lafayette, California</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/Serene-Vibrance-Intuitive-Coaching" target="_blank" title="Facebook">f</a>
+            <a href="https://www.instagram.com/coaching_serenevibrance/" target="_blank" title="Instagram">📷</a>
+            <a href="https://www.linkedin.com/in/kristen-irene-diaz-010937108" target="_blank" title="LinkedIn">in</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="facials.html">Facials</a>
+          <a href="coaching.html">Coaching</a>
+          <a href="waxing.html">Waxing</a>
+          <a href="elevate.html">Elevate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Offerings</h4>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="index.html#newsletter">Newsletter</a>
+          <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank">Book Online</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Serene Vibrance. Spa & Intuitive Coaching for Whole-Self Wellness.
+      </div>
+    </footer>
+  </body>
+</html>

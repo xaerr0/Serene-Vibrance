@@ -1,626 +1,1707 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serene Vibrance — Spa & Intuitive Coaching, Lafayette, CA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --coral: #f9a392;
+        --coral-soft: #fab5aa;
+        --sage: #a68b9c;
+        --sage-light: #c4b4bf;
+        --cream: #fef1ef;
+        --dark: #211e1c;
+        --text-light: #6b6561;
+        --divider: #e8d4cc;
+      }
 
-<head>
-  <meta charset="utf-8" />
-  <title>Serene Vibrance</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-  <!-- Favicon -->
-  <link href="img/favicon.ico" rel="icon" />
+      html {
+        scroll-behavior: smooth;
+      }
 
-  <!-- Google Web Fonts -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+      body {
+        background: var(--cream);
+        color: var(--dark);
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
 
-  <!-- Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+      img,
+      svg {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
 
-  <!-- Libraries Stylesheet -->
-  <link href="lib/animate/animate.min.css" rel="stylesheet" />
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-  <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+      a {
+        color: inherit;
+        transition: color 0.3s ease;
+      }
 
-  <!-- Customized Bootstrap Stylesheet -->
-  <link href="css/style.purged.css" rel="stylesheet" />
-</head>
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
 
-<body>
-  <!-- Topbar Start -->
-  <div class="container-fluid bg-light d-none d-lg-block">
-    <div class="row py-2 px-lg-5">
-      <div class="col-lg-6 text-left mb-2 mb-lg-0">
-        <div class="d-inline-flex align-items-center">
-          <small><i class="fa fa-phone-alt mr-2"></i>(415) 430 - 8476</small>
-          <small class="px-3">|</small>
-            <small>
-              <i class="fa fa-envelope mr-2"></i>
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Lora", serif;
+        font-weight: 600;
+        line-height: 1.2;
+        color: var(--dark);
+      }
+
+      h1 {
+        font-size: 56px;
+      }
+
+      h2 {
+        font-size: 42px;
+      }
+
+      h3 {
+        font-size: 28px;
+      }
+
+      p {
+        font-size: 16px;
+        color: var(--text-light);
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 32px;
+        border: none;
+        border-radius: 4px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background: linear-gradient(
+          135deg,
+          var(--coral) 0%,
+          var(--coral-soft) 100%
+        );
+        color: white;
+      }
+
+      .btn-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(249, 163, 146, 0.3);
+      }
+
+      .btn-secondary {
+        background: white;
+        color: var(--coral);
+        border: 2px solid var(--coral);
+      }
+
+      .btn-secondary:hover {
+        background: var(--cream);
+      }
+
+      /* Navigation */
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(254, 241, 239, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(232, 212, 204, 0.3);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        font-family: "Lora", serif;
+        font-size: 20px;
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      .logo span {
+        color: var(--sky);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-light);
+        position: relative;
+        padding-bottom: 4px;
+      }
+
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: var(--coral);
+        transition: width 0.3s ease;
+      }
+
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      .nav-links a.active::after {
+        width: 100%;
+        background: var(--coral);
+      }
+
+      .nav-links a.active {
+        color: var(--coral);
+        font-weight: 600;
+      }
+
+      .nav-cta {
+        display: flex;
+        gap: 16px;
+      }
+
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--dark);
+      }
+
+      /* Hero Section */
+      .hero {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 40px;
+        overflow: hidden;
+        background-image: url('Images/treatment-room.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+      }
+
+      .hero-subtitle {
+        font-family: "Lora", serif;
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+
+      .hero h1 {
+        margin-bottom: 24px;
+        color: white;
+      }
+
+      .hero p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-ctas {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      /* Philosophy Section */
+      .philosophy {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .philosophy-content {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .philosophy h2 {
+        margin-bottom: 32px;
+      }
+
+      .philosophy p {
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 24px;
+      }
+
+      .philosophy p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* Services Grid */
+      .services {
+        padding: 100px 40px;
+        background: linear-gradient(
+          180deg,
+          var(--cream) 0%,
+          rgba(181, 212, 184, 0.1) 100%
+        );
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 80px;
+      }
+
+      .section-header h2 {
+        margin-bottom: 16px;
+      }
+
+      .section-header p {
+        font-size: 18px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      /* Services Carousel */
+      .carousel {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        height: 480px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .carousel-slide {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.8s ease;
+        display: flex;
+        align-items: flex-end;
+        text-align: center;
+      }
+
+      .carousel-slide.active {
+        opacity: 1;
+        z-index: 1;
+      }
+
+      .slide-overlay {
+        width: 100%;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+        padding: 60px 40px 40px;
+        color: white;
+      }
+
+      .slide-overlay h3 {
+        color: white;
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+
+      .slide-overlay p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 24px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .slide-overlay .btn {
+        display: inline-block;
+      }
+
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        color: white;
+        font-size: 24px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background 0.3s ease;
+        z-index: 2;
+      }
+
+      .carousel-arrow:hover,
+      .carousel-arrow:focus {
+        background: rgba(255, 255, 255, 0.6);
+        outline: none;
+      }
+
+      .carousel-arrow.prev {
+        left: 20px;
+      }
+
+      .carousel-arrow.next {
+        right: 20px;
+      }
+
+      .carousel-dots {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+        z-index: 2;
+      }
+
+      .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        border: none;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .carousel-dot.active {
+        background: var(--coral);
+      }
+
+      .carousel-dot:hover {
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      /* Featured Service */
+      .featured-service {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .featured-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .featured-image {
+        border-radius: 12px;
+        overflow: hidden;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("Images/treatment-room.jpg");
+        box-shadow: 0 20px 60px rgba(249, 163, 146, 0.15);
+      }
+
+      .featured-content h2 {
+        margin-bottom: 24px;
+      }
+
+      .featured-content p {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .service-highlights {
+        list-style: none;
+        margin: 32px 0;
+      }
+
+      .service-highlights li {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 12px;
+        font-size: 15px;
+      }
+
+      .service-highlights li::before {
+        content: "✨";
+        flex-shrink: 0;
+        color: var(--coral);
+      }
+
+      /* Coaching Section */
+      .coaching {
+        padding: 100px 40px;
+        background: linear-gradient(
+          135deg,
+          var(--sage) 0%,
+          var(--sage-light) 100%
+        );
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .coaching::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      .coaching-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .coaching h2 {
+        color: white;
+        margin-bottom: 24px;
+      }
+
+      .coaching p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 24px;
+      }
+
+      .coaching .btn-secondary {
+        background: white;
+        color: var(--sky);
+        border-color: white;
+      }
+
+      .coaching .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--sage);
+      }
+
+      /* Elevate Section */
+      .elevate {
+        padding: 100px 40px;
+        background: linear-gradient(
+          135deg,
+          var(--coral-soft) 0%,
+          var(--coral) 100%
+        );
+        color: white;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .elevate::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        left: -10%;
+        width: 600px;
+        height: 600px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      .elevate-content {
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .elevate h2 {
+        color: white;
+        margin-bottom: 24px;
+      }
+
+      .elevate p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 17px;
+        line-height: 1.8;
+        margin-bottom: 24px;
+      }
+
+      .elevate .btn-secondary {
+        background: white;
+        color: var(--coral);
+        border-color: white;
+      }
+
+      .elevate .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.95);
+        color: var(--coral);
+      }
+
+      /* Facial Menu Section */
+      .facial-menu {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .menu-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        max-width: 1000px;
+        margin: 40px auto;
+      }
+
+      .menu-column ul {
+        list-style: none;
+      }
+
+      .menu-column li {
+        padding: 12px 0;
+        padding-left: 24px;
+        position: relative;
+        font-size: 16px;
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+
+      .menu-column li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--sage);
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        .menu-list {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .elevate,
+        .facial-menu {
+          padding: 60px 20px;
+        }
+      }
+
+      /* Newsletter Section */
+      .newsletter {
+        padding: 100px 40px;
+        background: linear-gradient(
+          135deg,
+          var(--sage-light) 0%,
+          var(--sage) 100%
+        );
+        color: white;
+      }
+
+      .newsletter-content {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .newsletter h2 {
+        color: white;
+        margin-bottom: 12px;
+      }
+
+      .newsletter p {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 16px;
+        margin-bottom: 40px;
+      }
+
+      .newsletter-form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group input[type="text"],
+      .form-group input[type="email"] {
+        padding: 14px 16px;
+        border: none;
+        border-radius: 4px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        background: white;
+        color: var(--dark);
+      }
+
+      .form-group input[type="text"]::placeholder,
+      .form-group input[type="email"]::placeholder {
+        color: var(--text-light);
+      }
+
+      .form-group.checkbox {
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin: 8px 0;
+      }
+
+      .form-group.checkbox input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+      }
+
+      .form-group.checkbox label {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 14px;
+        cursor: pointer;
+        margin: 0;
+      }
+
+      .newsletter-form .btn-primary {
+        background: white;
+        color: var(--sage);
+        border: none;
+        margin-top: 10px;
+      }
+
+      .newsletter-form .btn-primary:hover {
+        background: rgba(255, 255, 255, 0.95);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .newsletter {
+          padding: 60px 20px;
+        }
+
+        .newsletter-form {
+          gap: 12px;
+        }
+      }
+
+      /* About Section */
+      .about {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .about-wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+
+      .about-image {
+        border-radius: 12px;
+        overflow: hidden;
+        height: 500px;
+        background-size: cover;
+        background-position: center;
+        background-image: url("Images/kristen-about.jpg");
+        order: 2;
+      }
+
+      .about-content {
+        order: 1;
+      }
+
+      .about h2 {
+        margin-bottom: 24px;
+      }
+
+      .about p {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      /* Testimonials */
+      .testimonials {
+        padding: 100px 40px;
+        background: linear-gradient(180deg, var(--cream) 0%, white 100%);
+      }
+
+      .testimonials .section-header {
+        margin-bottom: 60px;
+      }
+
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      .testimonial-card {
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+      }
+
+      .stars {
+        color: var(--coral);
+        font-size: 16px;
+        margin-bottom: 16px;
+        letter-spacing: 2px;
+      }
+
+      .testimonial-card p {
+        font-size: 15px;
+        font-style: italic;
+        margin-bottom: 20px;
+        color: var(--text-light);
+        line-height: 1.8;
+      }
+
+      .testimonial-credit {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--dark);
+      }
+
+      /* Contact & Booking */
+      .contact {
+        padding: 100px 40px;
+        background: white;
+      }
+
+      .contact-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .contact h2 {
+        margin-bottom: 16px;
+      }
+
+      .contact p {
+        font-size: 18px;
+        margin-bottom: 40px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        margin: 60px 0;
+      }
+
+      .contact-item {
+        text-align: center;
+      }
+
+      .contact-item svg {
+        width: 40px;
+        height: 40px;
+        margin: 0 auto 16px;
+        color: var(--coral);
+      }
+
+      .contact-item h4 {
+        margin-bottom: 8px;
+      }
+
+      .contact-item p {
+        margin-bottom: 0;
+      }
+
+      .contact-item a {
+        color: var(--coral);
+        text-decoration: none;
+      }
+
+      .contact-item a:hover {
+        text-decoration: underline;
+      }
+
+      .booking-banner {
+        margin-top: 60px;
+        padding: 60px 40px;
+        background: linear-gradient(
+          135deg,
+          var(--coral) 0%,
+          var(--coral-soft) 100%
+        );
+        border-radius: 12px;
+        color: white;
+        text-align: center;
+      }
+
+      .booking-banner h3 {
+        color: white;
+        margin-bottom: 16px;
+      }
+
+      .booking-banner p {
+        color: rgba(255, 255, 255, 0.95);
+        margin-bottom: 24px;
+      }
+
+      /* Footer */
+      footer {
+        background: var(--dark);
+        color: #b0a89a;
+        padding: 60px 40px 40px;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 60px;
+        margin-bottom: 40px;
+      }
+
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 16px;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .footer-col p {
+        font-size: 14px;
+        color: #b0a89a;
+        margin-bottom: 12px;
+      }
+
+      .footer-col a {
+        display: block;
+        font-size: 14px;
+        color: #b0a89a;
+        text-decoration: none;
+        margin-bottom: 8px;
+      }
+
+      .footer-col a:hover {
+        color: var(--coral);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        transition: background 0.3s ease;
+      }
+
+      .social-links a:hover {
+        background: var(--coral);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 30px;
+        text-align: center;
+        font-size: 13px;
+        color: #8b8377;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .container,
+        nav,
+        .philosophy-content,
+        .section-header,
+        .carousel,
+        .featured-wrapper,
+        .about-wrapper,
+        .testimonials-grid,
+        .contact-wrapper,
+        .contact-grid,
+        .footer-content {
+          padding: 0 20px;
+        }
+
+        .carousel {
+          height: 360px;
+        }
+
+        .carousel-arrow {
+          width: 40px;
+          height: 40px;
+          font-size: 20px;
+        }
+
+        .carousel-arrow.prev {
+          left: 12px;
+        }
+
+        .carousel-arrow.next {
+          right: 12px;
+        }
+
+        .slide-overlay {
+          padding: 40px 20px 20px;
+        }
+
+        .slide-overlay h3 {
+          font-size: 24px;
+        }
+
+        .slide-overlay p {
+          font-size: 14px;
+          margin-bottom: 16px;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        h2 {
+          font-size: 28px;
+        }
+
+        nav {
+          padding: 16px 20px;
+          flex-wrap: wrap;
+        }
+
+        .nav-links {
+          gap: 20px;
+          font-size: 13px;
+        }
+
+        .nav-cta {
+          order: 3;
+          width: 100%;
+          margin-top: 12px;
+        }
+
+        .hero {
+          padding: 60px 20px;
+          min-height: 70vh;
+        }
+
+        .philosophy,
+        .services,
+        .featured-service,
+        .coaching,
+        .about,
+        .testimonials,
+        .contact {
+          padding: 60px 20px;
+        }
+
+        .services-grid,
+        .featured-wrapper,
+        .about-wrapper {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .featured-image,
+        .about-image {
+          height: 300px;
+        }
+
+        .about-image {
+          order: 1;
+        }
+
+        .about-content {
+          order: 2;
+        }
+
+        .testimonials-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-ctas {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-ctas .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
+        .menu-toggle {
+          display: block;
+          order: 2;
+        }
+
+        .nav-links {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          order: 3;
+          margin-top: 16px;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          Serene <span style="color: var(--sage)">Vibrance</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="facials.html">Facials</a></li>
+          <li><a href="coaching.html">Coaching</a></li>
+          <li><a href="waxing.html">Waxing</a></li>
+          <li><a href="elevate.html">Elevate</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="#contact" class="btn btn-secondary">Contact</a>
+          <a
+            href="https://www.vagaro.com/serenevibrancelafayette/book-now"
+            target="_blank"
+            class="btn btn-primary"
+            >Book Now</a
+          >
+        </div>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-subtitle">A Spa Experience Like No Other</p>
+        <h1>Radiant Skin Starts Here</h1>
+        <p>
+          Expert facials, intuitive coaching, and a sanctuary where you're truly
+          seen. Let's bring out the best version of you.
+        </p>
+        <div class="hero-ctas">
+          <a
+            href="https://www.vagaro.com/serenevibrancelafayette/book-now"
+            target="_blank"
+            class="btn btn-primary"
+            >Book a Treatment</a
+          >
+          <a href="facials.html" class="btn btn-secondary">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="philosophy">
+      <div class="philosophy-content">
+        <h2>Beauty Comes from Within</h2>
+        <p>
+          Real wellness isn't just about how you look. It's about how you feel.
+          That's why we combine expert skincare with intuitive coaching to help
+          you shine from the inside out.
+        </p>
+        <p>
+          Every facial is personalized. Every coaching session is a conversation.
+          We're here to listen, support, and celebrate your journey with you.
+        </p>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Services</h2>
+          <p>
+            From advanced facials to intuitive coaching, each offering is
+            designed to help you feel your best.
+          </p>
+        </div>
+        <div class="carousel" id="services-carousel">
+          <div class="carousel-slide active" style="background-image:url('Images/service-coaching.jpg')">
+            <div class="slide-overlay">
+              <h3>Coaching</h3>
+              <p>Get clear on your goals, shift old patterns, and step into your power. Coaching here is about real conversations that lead to real change.</p>
+              <a class="btn btn-secondary" href="#coaching">View Coaching Services</a>
+            </div>
+          </div>
+          <div class="carousel-slide" style="background-image:url('Images/service-facials.jpg')">
+            <div class="slide-overlay">
+              <h3>Facials</h3>
+              <p>Let your skin breathe and glow. Whether you need deep hydration, anti-aging help, or just some pampering, we customize every facial to what your skin needs right now.</p>
+              <a class="btn btn-secondary" href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" rel="noopener">View Facial Services</a>
+            </div>
+          </div>
+          <div class="carousel-slide" style="background-image:url('Images/service-waxes.jpg')">
+            <div class="slide-overlay">
+              <h3>Waxing</h3>
+              <p>Smooth skin, zero fuss. From brows to legs, we handle it all with care and precision so you can feel confident in your own skin.</p>
+              <a class="btn btn-secondary" href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" rel="noopener">View Waxing Services</a>
+            </div>
+          </div>
+          <div class="carousel-slide" style="background-image:url('Images/service-additions.jpg')">
+            <div class="slide-overlay">
+              <h3>Add-Ons & Enhancements</h3>
+              <p>Make your experience even better. Add energy work, LED therapy, hand and foot treatments, or massage to any facial for the perfect customized session.</p>
+              <a class="btn btn-secondary" href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" rel="noopener">View Service Add-Ons</a>
+            </div>
+          </div>
+          <button class="carousel-arrow prev" aria-label="Previous slide">&#10094;</button>
+          <button class="carousel-arrow next" aria-label="Next slide">&#10095;</button>
+          <div class="carousel-dots"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-service">
+      <div class="featured-wrapper">
+        <div class="featured-image"></div>
+        <div class="featured-content">
+          <h2>The Ooo La La Facial</h2>
+          <p>
+            Our most popular facial. In 60 minutes, you'll get professional-grade
+            treatments that smooth lines, brighten texture, and leave your skin
+            absolutely glowing. Perfect for anyone ready to love their complexion.
+          </p>
+          <ul class="service-highlights">
+            <li>Professional microdermabrasion</li>
+            <li>Deep extractions & hydration</li>
+            <li>Oxygen mist infusion</li>
+            <li>Microcurrent lifting therapy</li>
+            <li>LED light therapy</li>
+            <li>Luxe moisturizing mask</li>
+          </ul>
+          <a href="facials.html" class="btn btn-primary">View All Facials</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="coaching" id="coaching">
+      <div class="coaching-content">
+        <h2>Intuitive Coaching</h2>
+        <p>
+          Real change goes deeper than skincare. In coaching sessions (virtual or
+          in-person), we'll explore what's holding you back, what you actually
+          want, and how to get there. Think of it as a conversation with someone
+          who gets it.
+        </p>
+        <p style="font-size: 16px">
+          Whether you're stuck, overwhelmed, or just ready for something different,
+          coaching can help. Start with a free intro session, then choose sessions
+          ($164 for 90 min) or a Half-Day Retreat that pairs coaching with a facial
+          (starting at $445).
+        </p>
+        <a
+          href="https://www.vagaro.com/serenevibrancelafayette/book-now"
+          target="_blank"
+          class="btn btn-secondary"
+          >Schedule a Session</a
+        >
+      </div>
+    </section>
+
+    <section class="elevate" id="elevate">
+      <div class="elevate-content">
+        <h2>Elevate: Personal Growth Circle</h2>
+        <p>
+          Ready for a deeper dive? The Elevate program is a 3-month personal-growth
+          circle featuring two full-day retreats, weekly group calls, and support
+          for your next evolution. It's yoga, facials, coaching, and community all
+          in one transformative experience.
+        </p>
+        <a
+          href="elevate.html"
+          class="btn btn-secondary"
+          >Learn More About Elevate</a
+        >
+      </div>
+    </section>
+
+    <section class="facial-menu">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Facial Services</h2>
+          <p>
+            From quick refreshers to comprehensive anti-aging treatments, we have
+            a facial for every need. New clients get 20% off your first appointment.
+          </p>
+        </div>
+        <div class="menu-list">
+          <div class="menu-column">
+            <ul>
+              <li>New Client Facial (20% off)</li>
+              <li>Short and Sweet</li>
+              <li>Absolutely Lovely</li>
+              <li>Ooo La La (Our Signature)</li>
+              <li>Sweet Escape</li>
+              <li>Two-Hour Facial</li>
+              <li>90-Minute Facial</li>
+              <li>Microchanneling Deluxe Facial Renewal</li>
+            </ul>
+          </div>
+          <div class="menu-column">
+            <ul>
+              <li>Banished Clear Skin LED Facial</li>
+              <li>Renewed LED Facial</li>
+              <li>Ultra Lift Treatment</li>
+              <li>Organic Arctic Berry Peel</li>
+              <li>Men's Hardy Skin Treatment</li>
+              <li>Polished</li>
+              <li>Birthday Facial</li>
+            </ul>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; font-size: 16px;">
+          For pricing and to book your facial, visit our online scheduler.
+        </p>
+        <div style="text-align: center;">
+          <a href="facials.html" class="btn btn-primary">View All Facials & Book</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-wrapper">
+        <div class="about-image"></div>
+        <div class="about-content">
+          <h2>Meet Kristen Irene</h2>
+          <p>
+            With over 20 years in the spa and wellness industry, I've built a
+            career around what I'm most passionate about: helping people feel seen,
+            supported, and radiant. My background includes 18 years as a women's
+            retreat facilitator, training at a holistic school in Maui, 2nd-degree
+            Reiki certification, and extensive medical spa technique training.
+          </p>
+          <p>
+            Serene Vibrance brings together everything I've learned and loved: expert
+            skincare, energy work, and intuitive guidance. Every facial is personalized,
+            every coaching session is a real conversation, and you'll always feel cared
+            for. Walk in feeling stressed. Walk out feeling like yourself again.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>What Clients Say</h2>
+          <p>
+            Real experiences from people who've experienced our treatments and
+            coaching.
+          </p>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Spending a day with Kristen at her retreat felt so nourishing on all levels. I felt uplifted and whole, like my cup was full and overflowing after the day."
+            </p>
+            <div class="testimonial-credit">Tina</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Kristen Irene is first class. I have been enjoying her facials and knowledge for over 7 years. Highly recommend!"
+            </p>
+            <div class="testimonial-credit">Ward Moore • San Francisco</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Kristen Irene is the only person who knows what works best with my skin. She is so sweet and always has positive energy."
+            </p>
+            <div class="testimonial-credit">Candice Serran • San Francisco</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "I love how much the sun damage on my face, neck and chest have diminished. I feel like I am getting older in the best way possible."
+            </p>
+            <div class="testimonial-credit">Sheryl Sankey • Walnut Creek</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Under Irene's care, I've finally started to love my skin again. I don't know what I'd do without her!"
+            </p>
+            <div class="testimonial-credit">Heidi Hudson • San Francisco</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p>
+              "Every time I see Kristen, whether it's for a facial or coaching, I feel healed and so peaceful afterwards."
+            </p>
+            <div class="testimonial-credit">Maria</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="newsletter">
+      <div class="newsletter-content">
+        <h2>Stay in the Loop</h2>
+        <p>Get updates about new services, special offerings, and upcoming events.</p>
+        <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+          <div class="form-group">
+            <input
+              type="text"
+              placeholder="First and Last Name"
+              required
+              aria-label="Name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              placeholder="Your Email"
+              required
+              aria-label="Email"
+            />
+          </div>
+          <div class="form-group checkbox">
+            <input
+              type="checkbox"
+              id="consent"
+              required
+              aria-label="Agree to receive communications"
+            />
+            <label for="consent">I'd like to receive updates and special offers</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Subscribe to Newsletter</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-wrapper">
+        <h2>Ready to Feel Serene?</h2>
+        <p>
+          Book a facial, waxing, peel, or intuitive coaching session. We're in
+          Lafayette, California, and available by appointment.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-item">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              ></path>
+            </svg>
+            <h4>Phone</h4>
+            <p><a href="tel:+14154308476">(415) 430-8476</a></p>
+          </div>
+          <div class="contact-item">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+              ></path>
+            </svg>
+            <h4>Email</h4>
+            <p>
               <a href="mailto:rejuvenatingyourskin@gmail.com"
                 >rejuvenatingyourskin@gmail.com</a
               >
-            </small>
-        </div>
-      </div>
-      <div class="col-lg-6 text-right">
-        <div class="d-inline-flex align-items-center">
-          <a class="text-primary px-2" href="http://www.facebook.com/Serene-Vibrance-Intuitive-Coaching"
-            target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <!-- <a class="text-primary px-2" href="">
-              <i class="fab fa-twitter"></i>
-            </a> -->
-          <a class="text-primary px-2" href="https://www.linkedin.com/in/kristen-irene-diaz-010937108" target="_blank">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a class="text-primary px-2" href="https://www.instagram.com/coaching_serenevibrance/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <!-- <a class="text-primary pl-2" href="">
-              <i class="fab fa-youtube"></i>
-            </a> -->
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Topbar End -->
-
-  <!-- Navbar Start -->
-  <div class="container-fluid p-0">
-    <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0 px-lg-5">
-      <a href="index.html" class="navbar-brand ml-lg-3">
-        <h1 class="m-0 text-primary">
-          <span class="text-dark">Serene</span> Vibrance
-        </h1>
-      </a>
-      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-between px-lg-3" id="navbarCollapse">
-        <div class="navbar-nav m-auto py-0">
-          <a href="index.html" class="nav-item nav-link active">Home</a>
-          <a href="about.html" class="nav-item nav-link">About</a>
-          <a href="service.html" class="nav-item nav-link">Services</a>
-          <div class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-            <div class="dropdown-menu rounded-0 m-0">
-              <a href="appointment.html" class="dropdown-item">Appointment</a>
-              <a href="opening.html" class="dropdown-item">Open Hours</a>
-              <a href="team.html" class="dropdown-item">Our Team</a>
-              <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-            </div>
-          </div>
-          <a href="contact.html" class="nav-item nav-link">Contact</a>
-        </div>
-        <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank"
-          class="btn btn-primary d-none d-lg-block">Book Now</a>
-      </div>
-    </nav>
-  </div>
-  <!-- Navbar End -->
-
-  <!-- Carousel Start -->
-  <div class="container-fluid p-0 mb-5 pb-5">
-    <div id="header-carousel" class="carousel slide carousel-fade" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#header-carousel" data-slide-to="0" class="active"></li>
-        <li data-target="#header-carousel" data-slide-to="1"></li>
-        <li data-target="#header-carousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item position-relative active" style="min-height: 100vh">
-          <img class="position-absolute w-100 h-100" src="img/pexels-arina-krasnikova-6663365.jpg"
-            style="object-fit: cover" />
-          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <div class="p-3" style="max-width: 900px">
-              <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown"
-                style="letter-spacing: 3px">
-                Wellness & Skincare Studio
-              </h6>
-              <h3 class="display-3 text-capitalize text-white mb-3">
-                Facials
-              </h3>
-              <p class="mx-md-5 px-5">
-                Our Ooo La La treatment is the ultimate result-oriented
-                anti-aging facial. Microdermabrasion, extractions, nourishing
-                oxygen mist, followed by microcurrents to lift and firm.
-                Rejuvenating custom mask, tons of pampering, and then LED
-                lights.
-              </p>
-              <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
-                href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank">Make Appointment</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item position-relative" style="min-height: 100vh">
-          <img class="position-absolute w-100 h-100" src="img/circleofslippersbloom_orig.jpg"
-            style="object-fit: cover" />
-          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <div class="p-3" style="max-width: 900px">
-              <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown"
-                style="letter-spacing: 3px">
-                Wellness & Skincare Studio
-              </h6>
-              <h3 class="display-3 text-capitalize text-white mb-3">
-                Coaching
-              </h3>
-              <p class="mx-md-5 px-5">
-                With Serene Vibrance Intuitive Coaching, I will support you to
-                connect to your passion, find fulfillment, and fall in love
-                with yourself and your life.
-              </p>
-              <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
-                href="https://www.vagaro.com/serenevibrancelafayette/services" target="_blank">Make Appointment</a>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item position-relative" style="min-height: 100vh">
-          <img class="position-absolute w-100 h-100" src="img/pexels-photo-3756718.jpeg" style="object-fit: cover" />
-          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-            <div class="p-3" style="max-width: 900px">
-              <h6 class="text-white text-uppercase mb-3 animate__animated animate__fadeInDown"
-                style="letter-spacing: 3px">
-                Wellness & Skincare Studio
-              </h6>
-              <h3 class="display-3 text-capitalize text-white mb-3">
-                Self Care Women's Retreats
-              </h3>
-              <p class="mx-md-5 px-5">
-                Women’s Circles and Retreats offer a nurturing space for
-                personal growth, connection, and alignment through activities
-                like movement, meditation, Reiki, and guided facials. These
-                experiences are designed to inspire confidence, foster
-                authentic connections, and provide tools for deeper
-                self-discovery.
-              </p>
-              <a class="btn btn-outline-light py-3 px-4 mt-3 animate__animated animate__fadeInUp"
-                href="https://www.vagaro.com/serenevibrancelafayette/services" target="_blank">Make Appointment</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Carousel End -->
-
-  <!-- About Start -->
-  <!-- <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="row align-items-center">
-                <div class="col-lg-6 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100" src="img/about.jpg" alt="">
-                </div>
-                <div class="col-lg-6">
-                    <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">About Us</h6>
-                    <h1 class="mb-4">Your Ultimate Spa, Beauty, and Skincare Haven.</h1>
-                    <p class="pl-4 border-left border-primary">Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr stet dolor sed sit et sed ipsum et kasd erat duo eos et erat</p>
-                    <div class="row pt-3">
-                        <div class="col-6">
-                            <div class="bg-light text-center p-4">
-                                <h3 class="display-4 text-primary" data-toggle="counter-up">99</h3>
-                                <h6 class="text-uppercase">Spa Specialist</h6>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="bg-light text-center p-4">
-                                <h3 class="display-4 text-primary" data-toggle="counter-up">999</h3>
-                                <h6 class="text-uppercase">Happy Clients</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-  <!-- About End -->
-
-  <!-- Service Start -->
-  <div class="container-fluid px-0 py-0 my-5">
-    <div class="row mx-0 justify-content-center text-center">
-      <div class="col-lg-6">
-        <h6 class="d-inline-block bg-light text-primary text-uppercase py-1 px-2">
-          Our Services
-        </h6>
-        <h1>Spa & Beauty Services</h1>
-      </div>
-    </div>
-    <div class="owl-carousel service-carousel">
-      <div class="service-item position-relative">
-        <img class="img-fluid" src="img/services-1.png" alt="" />
-        <div class="service-text text-center">
-          <h4 class="text-white font-weight-medium px-3">Coaching</h4>
-          <p class="text-white px-3 mb-3">
-            Empowering life coaching services focus on goal setting, mindset shifts, personal growth, overcoming
-            challenges, and achieving fulfillment.
-          </p>
-          <div class="w-100 bg-white text-center p-35">
-            <a class="btn btn-primary" href="">View Coaching Services</a>
-          </div>
-        </div>
-      </div>
-      <div class="service-item position-relative">
-        <img class="img-fluid" src="img/Facials/facials-2.png" alt="" />
-        <div class="service-text text-center">
-          <h4 class="text-white font-weight-medium px-3">Facials</h4>
-          <p class="text-white px-3 mb-3">
-            Facial services include cleansing, exfoliation, hydration, anti-aging treatments, extractions, LED therapy,
-            and rejuvenating masks.
-          </p>
-          <div class="w-100 bg-white text-center p-35">
-            <a class="btn btn-primary" href="">View Facial Services</a>
-          </div>
-        </div>
-      </div>
-      <div class="service-item position-relative">
-        <img class="img-fluid" src="img/waxing/waxing-2.jpg" alt="" />
-        <div class="service-text text-center">
-          <h4 class="text-white font-weight-medium px-3">Waxes</h4>
-          <p class="text-white px-3 mb-3">
-            Waxing services provide smooth, hair-free skin with options for brows, face, legs, arms, bikini, and more.
-          </p>
-          <div class="w-100 bg-white text-center p-35">
-            <a class="btn btn-primary" href="">View Waxing Services</a>
-          </div>
-        </div>
-      </div>
-      <div class="service-item position-relative">
-        <img class="img-fluid" src="img/additions-1.png" alt="" />
-        <div class="service-text text-center">
-          <h4 class="text-white font-weight-medium px-3">Additions</h4>
-          <p class="text-white px-3 mb-3">
-            Rejuvenating treatments include eye therapy, Reiki, extractions, LED, massage, hand/foot care,
-            micro-penning, and Dermared.
-          </p>
-          <div class="w-100 bg-white text-center p-35">
-            <a class="btn btn-primary" href="">View Service Additions</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row justify-content-center bg-appointment mx-0">
-      <div class="col-lg-6 py-5">
-        <div class="p-5 my-5" style="background: rgba(33, 30, 28, 0.7)">
-          <h1 class="text-white text-center mb-4">Make Appointment</h1>
-          <form>
-            <div class="form-row">
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input type="text" class="form-control bg-transparent p-4" placeholder="Your Name"
-                    required="required" />
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <input type="email" class="form-control bg-transparent p-4" placeholder="Your Email"
-                    required="required" />
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <div class="date" id="date" data-target-input="nearest">
-                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input"
-                      placeholder="Select Date" data-target="#date" data-toggle="datetimepicker" />
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <div class="time" id="time" data-target-input="nearest">
-                    <input type="text" class="form-control bg-transparent p-4 datetimepicker-input"
-                      placeholder="Select Time" data-target="#time" data-toggle="datetimepicker" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <select class="custom-select bg-transparent px-4" style="height: 47px">
-                    <option selected>Select A Service</option>
-                    <option value="1">Service 1</option>
-                    <option value="2">Service 1</option>
-                    <option value="3">Service 1</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <button class="btn btn-primary btn-block" type="submit" style="height: 47px">
-                  Make Appointment
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Service End -->
-
-  <!-- Open Hours Start -->
-  <div class="container-fluid py-0">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-6" style="min-height: 500px">
-          <div class="position-relative h-100">
-            <img class="position-absolute w-100 h-100" src="img/opening.jpg" style="object-fit: cover" />
-          </div>
-        </div>
-        <div class="col-lg-6 pt-5 pb-lg-5">
-          <div class="hours-text bg-light p-4 p-lg-5 my-lg-5">
-            <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">
-              Open Hours
-            </h6>
-            <h1 class="mb-4">Serene Vibrance</h1>
-            <h6>Only accepting clients in Lafayette</h6>
-            <p>
-              Dolores lorem lorem ipsum sit et ipsum. Sadip sea amet diam
-              dolore sed et. Sit rebum labore sit sit ut vero no sit. Et elitr
-              stet dolor sed sit et sed ipsum et kasd ut. Erat duo eos et erat
-              sed diam duo
             </p>
-            <ul class="list-inline">
-              <li class="h6 py-1">
-                <i class="far fa-circle text-primary mr-3"></i>Sun, Mon, Fri :
-                CLOSED
-              </li>
-              <li class="h6 py-1">
-                <i class="far fa-circle text-primary mr-3"></i>Tuesday : 1:00
-                PM - 8:30 PM
-              </li>
-              <li class="h6 py-1">
-                <i class="far fa-circle text-primary mr-3"></i>Wednesday :
-                11:00 PM - 8:00 PM
-              </li>
-              <li class="h6 py-1">
-                <i class="far fa-circle text-primary mr-3"></i>Thursday : 1:00
-                PM - :30 PM
-              </li>
-              <li class="h6 py-1">
-                <i class="far fa-circle text-primary mr-3"></i>Saturday :
-                11:30 AM - 7:30 PM
-              </li>
-            </ul>
-            <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank"
-              class="btn btn-primary mt-2">Book Now</a>
+          </div>
+          <div class="contact-item">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <h4>Location</h4>
+            <p>1043 Stuart Street #140<br>Lafayette, California 94549</p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- About Kristen Start -->
-  <!-- Need to fix mobile layout for this section-->
-  <div class="container-fluid py-0">
-    <div class="container py-5">
-      <div class="row">
-        <div class="col-lg-6 pt-5 pb-lg-5 position-relative">
-          <div class="about-kristen bg-light p-4 p-lg-5 my-lg-5">
-            <h6 class="d-inline-block text-white text-uppercase bg-primary py-1 px-2">
-              About Kristen
-            </h6>
-            <h1 class="mb-4">Ever since I was young...</h1>
-            <p>
-              I have wanted to really know people, to connect with them in a
-              meaningful way. I have had the unique opportunity to do that
-              both as an esthetician, a women's retreat fascilitator, and as
-              an intuitive life coach. I've had the joy of hearing hundreds of
-              people's deepest thoughts and beautiful life stories. Please
-              visit my intuitive coaching website to learn more about those
-              sessions as well.
-            </p>
-            <a href="about.html" class="btn btn-primary mt-2">Read more</a>
-          </div>
-        </div>
-        <div class="col-lg-6" style="min-height: 500px">
-          <div class="position-relative h-100">
-            <img class="kristen-photo position-absolute w-100 h-100" src="img/petalumasunshinesmileme_orig.jpg"
-              style="object-fit: cover" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- About Kristen End -->
-
-  <!-- Team End -->
-
-  <!-- Testimonial Start -->
-  <div class="container-fluid py-0">
-    <div class="container py-5">
-      <div class="row align-items-center">
-        <div class="col-lg-6 pb-5 pb-lg-0">
-          <img class="img-fluid w-100" src="img/coaching/coaching-2.jpg" alt="" />
-        </div>
-        <div class="col-lg-6">
-          <h6 class="d-inline-block text-primary text-uppercase bg-light py-1 px-2">
-            Testimonial
-          </h6>
-          <h1 class="mb-4">What Our Clients Say!</h1>
-          <div class="owl-carousel testimonial-carousel">
-            <div class="position-relative">
-              <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0"></i>
-              <div class="d-flex align-items-center mb-3">
-                <img class="img-fluid rounded-circle" src="img/headshot_placeholder.jpg"
-                  style="width: 60px; height: 60px" alt="" />
-                <div class="ml-3">
-                  <h6 class="text-uppercase">Sheryl Sankey</h6>
-                  <span>Walnut Creek, CA</span>
-                </div>
-              </div>
-              <p class="m-0">
-                I have been receiving facials from Kristen Irene for several
-                years now. I love how much the sun damage on my face, neck and
-                chest have diminished. Instead there is an evenness and
-                brightness, so that I like what I see looking in the mirror
-                and love hearing how great I look.
-              </p>
-            </div>
-            <div class="position-relative">
-              <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0"></i>
-              <div class="d-flex align-items-center mb-3">
-                <img class="img-fluid rounded-circle" src="img/headshot_placeholder.jpg"
-                  style="width: 60px; height: 60px" alt="" />
-                <div class="ml-3">
-                  <h6 class="text-uppercase">Caroline Semerdjian</h6>
-                  <span>San Francisco, CA</span>
-                </div>
-              </div>
-              <p class="m-0">
-                In Kristen Irene’s care, daily stress is left at the door.
-                From start to finish, her facials are the ultimate experience
-                in pampering. She’s not only professional and knowledgeable,
-                she’s a beautiful person inside and out, who brings a zen-like
-                quality to her craft.
-              </p>
-            </div>
-            <div class="position-relative">
-              <i class="fa fa-3x fa-quote-right text-primary position-absolute" style="top: -6px; right: 0"></i>
-              <div class="d-flex align-items-center mb-3">
-                <img class="img-fluid rounded-circle" src="img/headshot_placeholder.jpg"
-                  style="width: 60px; height: 60px" alt="" />
-                <div class="ml-3">
-                  <h6 class="text-uppercase">Pauli Magierek</h6>
-                  <span>San Rafael, CA</span>
-                </div>
-              </div>
-              <p class="m-0">
-                It wasn't till I started seeing Kristen Irene that I realized
-                you can have a thorough cleaning, that is equally relaxing as
-                well! She gives the best attention to every detail and I
-                always feel like I took a mini vacation after seeing her.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Testimonial End -->
-
-  <!-- Footer Start -->
-  <div class="footer container-fluid position-relative bg-dark py-0" style="margin-top: 90px">
-    <div class="container pt-5">
-      <div class="row">
-        <div class="col-lg-6 pr-lg-5 mb-5">
-          <a href="index.html" class="navbar-brand">
-            <h1 class="mb-3 text-white">
-              <span class="text-primary">Serene</span> Vibrance
-            </h1>
-          </a>
+        <div class="booking-banner">
+          <h3>Book Your Appointment</h3>
           <p>
-            Aliquyam sed elitr elitr erat sed diam ipsum eirmod eos lorem
-            nonumy. Tempor sea ipsum diam sed clita dolore eos dolores magna
-            erat dolore sed stet justo et dolor.
+            Available for treatments and coaching sessions. Walk-ins by
+            appointment only.
           </p>
-          <p>
-            <i class="fa fa-map-marker-alt mr-2"></i>1043 Stuart Street #140
-            Lafayette CA 94549
-          </p>
-          <p><i class="fa fa-phone-alt mr-2"></i>(415) 430 - 8476</p>
-          <p>
-            <i class="fa fa-envelope mr-2"></i>rejuvenatingyourskin@gmail.com
-          </p>
-          <div class="d-flex justify-content-start mt-4">
-
-            <a class="btn btn-lg btn-primary btn-lg-square mr-2"
-              href="http://www.facebook.com/Serene-Vibrance-Intuitive-Coaching"><i class="fab fa-facebook-f"></i></a>
-            <a class="btn btn-lg btn-primary btn-lg-square mr-2" href="https://www.linkedin.com/in/kristen-irene-diaz-010937108"><i class="fab fa-linkedin-in"></i></a>
-            <a class="btn btn-lg btn-primary btn-lg-square" href="https://www.instagram.com/coaching_serenevibrance/"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-        <div class="col-lg-6 pl-lg-5">
-          <div class="row">
-            <div class="col-sm-6 mb-5">
-              <h5 class="text-white text-uppercase mb-4">Quick Links</h5>
-              <div class="d-flex flex-column justify-content-start">
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
-                <a class="text-white-50" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-              </div>
-            </div>
-            <div class="col-sm-6 mb-5">
-              <h5 class="text-white text-uppercase mb-4">Our Services</h5>
-              <div class="d-flex flex-column justify-content-start">
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Coaching</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Facials</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Waxes</a>
-                <a class="text-white-50 mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Additions</a>
-              </div>
-            </div>
-            <div class="col-sm-12 mb-5">
-              <h5 class="text-white text-uppercase mb-4">Newsletter</h5>
-              <div class="w-100">
-                <form
-                  action="https://gmail.us21.list-manage.com/subscribe/post?u=3925568340c929fadbfcd665e&amp;id=33d684341c&amp;f_id=00c48fe6f0"
-                  method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-                  target="_blank">
-                  <div class="input-group mc-field-group">
-                    <label for="mce-EMAIL">
-                      <input type="email" name="EMAIL" class="required" id="mce-EMAIL" style="padding: 15px"
-                        placeholder="Your Email Address" /></label>
-                    <div id="mce-responses" class="clear">
-                      <div class="response" id="mce-error-response" style="display: none"></div>
-                      <div class="response" id="mce-success-response" style="display: none"></div>
-                    </div>
-                    <div aria-hidden="true" style="position: absolute; left: -5000px">
-                      <input type="text" name="b_3925568340c929fadbfcd665e_33d684341c" tabindex="-1" value="" />
-                    </div>
-                    <div class="input-group-append">
-                      <button inputmode="submit" class="btn btn-primary px-4" type="submit" name="subscribe"
-                        id="mc_embedded_signup" value="Subscribe">
-                        Sign Up
-                      </button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
+          <a
+            href="https://www.vagaro.com/serenevibrancelafayette/book-now"
+            target="_blank"
+            class="btn btn-secondary"
+            >Book Now on Vagaro</a
+          >
         </div>
       </div>
-    </div>
-  </div>
-  <div class="container-fluid bg-dark text-light border-top py-4"
-    style="border-color: rgba(256, 256, 256, 0.15) !important">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
-          <p class="m-0 text-white">
-            &copy; <a href="#">Serene Vibrance</a>. All Rights Reserved.
-          </p>
+    </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Serene Vibrance</h4>
+          <p>Spa & Intuitive Coaching</p>
+          <p>Lafayette, California</p>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/Serene-Vibrance-Intuitive-Coaching"
+              target="_blank"
+              title="Facebook"
+              >f</a
+            >
+            <a
+              href="https://www.instagram.com/coaching_serenevibrance/"
+              target="_blank"
+              title="Instagram"
+              >📷</a
+            >
+            <a
+              href="https://www.linkedin.com/in/kristen-irene-diaz-010937108"
+              target="_blank"
+              title="LinkedIn"
+              >in</a
+            >
+          </div>
         </div>
-        <div class="col-md-6 text-center text-md-right">
-          <p class="m-0 text-white">Designed by <a href="">Danny Brown</a></p>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="facials.html">Facials</a>
+          <a href="coaching.html">Coaching</a>
+          <a href="waxing.html">Waxing</a>
+          <a href="elevate.html">Elevate</a>
+        </div>
+        <div class="footer-col">
+          <h4>Offerings</h4>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="index.html#newsletter">Newsletter</a>
+          <a
+            href="https://www.vagaro.com/serenevibrancelafayette/book-now"
+            target="_blank"
+            >Book Online</a
+          >
         </div>
       </div>
-    </div>
-  </div>
-  <!-- Footer End -->
+      <div class="footer-bottom">
+        &copy; 2026 Serene Vibrance. Spa & Intuitive Coaching for Whole-Self
+        Wellness.
+      </div>
+    </footer>
 
-  <!-- Back to Top -->
-  <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <script>
+      document.querySelector(".menu-toggle").addEventListener("click", () => {
+        document.querySelector(".nav-links").classList.toggle("active");
+      });
 
-  <!-- JavaScript Libraries -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/waypoints/waypoints.min.js"></script>
-  <script src="lib/counterup/counterup.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/tempusdominus/js/moment.min.js"></script>
-  <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-  <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+      document.querySelectorAll(".nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.querySelector(".nav-links").classList.remove("active");
+        });
+      });
 
-  <!-- Contact Javascript File -->
-  <script src="mail/jqBootstrapValidation.min.js"></script>
-  <script src="mail/contact.js"></script>
+      // Carousel initialization
+      const carousel = document.getElementById("services-carousel");
+      const slides = carousel.querySelectorAll(".carousel-slide");
+      const dotsContainer = carousel.parentElement.querySelector(".carousel-dots");
+      const prevBtn = carousel.parentElement.querySelector(".carousel-arrow.prev");
+      const nextBtn = carousel.parentElement.querySelector(".carousel-arrow.next");
 
-  <!-- Template Javascript -->
-  <script src="js/main.js"></script>
-</body>
+      let currentIndex = 0;
+      let autoPlayInterval;
 
+      // Create dots
+      slides.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.classList.add("carousel-dot");
+        if (index === 0) dot.classList.add("active");
+        dot.setAttribute("aria-label", `Go to slide ${index + 1}`);
+        dot.addEventListener("click", () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+      });
+
+      function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove("active"));
+        dotsContainer.querySelectorAll(".carousel-dot").forEach(dot => dot.classList.remove("active"));
+
+        slides[index].classList.add("active");
+        dotsContainer.querySelectorAll(".carousel-dot")[index].classList.add("active");
+        currentIndex = index;
+      }
+
+      function goToSlide(index) {
+        showSlide(index);
+        resetAutoPlay();
+      }
+
+      function nextSlide() {
+        const newIndex = (currentIndex + 1) % slides.length;
+        goToSlide(newIndex);
+      }
+
+      function prevSlide() {
+        const newIndex = (currentIndex - 1 + slides.length) % slides.length;
+        goToSlide(newIndex);
+      }
+
+      function startAutoPlay() {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        autoPlayInterval = setInterval(nextSlide, 5000);
+      }
+
+      function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+      }
+
+      function resetAutoPlay() {
+        stopAutoPlay();
+        startAutoPlay();
+      }
+
+      // Event listeners
+      prevBtn.addEventListener("click", prevSlide);
+      nextBtn.addEventListener("click", nextSlide);
+      carousel.addEventListener("mouseenter", stopAutoPlay);
+      carousel.addEventListener("mouseleave", startAutoPlay);
+
+      // Start auto-play
+      startAutoPlay();
+
+      // Newsletter form handler
+      function handleNewsletterSubmit(event) {
+        event.preventDefault();
+        const form = event.target;
+        const nameInput = form.querySelector('input[type="text"]');
+        const emailInput = form.querySelector('input[type="email"]');
+        const consentCheckbox = form.querySelector('#consent');
+
+        if (nameInput.value && emailInput.value && consentCheckbox.checked) {
+          // Show success message
+          const button = form.querySelector('button[type="submit"]');
+          const originalText = button.textContent;
+          button.textContent = "Thank you for subscribing!";
+          button.disabled = true;
+
+          // Reset form
+          form.reset();
+
+          // Restore button after 3 seconds
+          setTimeout(() => {
+            button.textContent = originalText;
+            button.disabled = false;
+          }, 3000);
+        }
+      }
+
+      // Active nav link indicator
+      document.addEventListener('DOMContentLoaded', function() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href').split('/').pop() || 'index.html';
+          if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+            link.classList.add('active');
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
