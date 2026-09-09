@@ -116,11 +116,24 @@
       .btn-secondary {
         background: white;
         color: var(--coral);
-        border: 2px solid var(--coral);
+        border: 2px solid white;
       }
 
       .btn-secondary:hover {
-        background: var(--cream);
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .hero .btn-secondary {
+        background: white;
+        color: var(--dark);
+        border: 2px solid white;
+        font-weight: 600;
+      }
+
+      .hero .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.95);
+        transform: translateY(-2px);
       }
 
       /* Navigation */
