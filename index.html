@@ -1167,23 +1167,6 @@
           grid-template-columns: 1fr;
           gap: 40px;
         }
-
-        .menu-toggle {
-          display: block;
-          order: 2;
-        }
-
-        .nav-links {
-          display: none;
-          width: 100%;
-          flex-direction: column;
-          order: 3;
-          margin-top: 16px;
-        }
-
-        .nav-links.active {
-          display: flex;
-        }
       }
     </style>
   </head>
@@ -1639,16 +1622,6 @@
     </footer>
 
     <script>
-      document.querySelector(".menu-toggle").addEventListener("click", () => {
-        document.querySelector(".nav-links").classList.toggle("active");
-      });
-
-      document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
-          document.querySelector(".nav-links").classList.remove("active");
-        });
-      });
-
       // Carousel initialization
       const carousel = document.getElementById("services-carousel");
       const slides = carousel.querySelectorAll(".carousel-slide");
