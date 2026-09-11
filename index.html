@@ -215,10 +215,42 @@
         display: none;
         background: none;
         border: none;
-        font-size: 24px;
         cursor: pointer;
         color: var(--dark);
         padding: 8px;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        z-index: 101;
+      }
+
+      .menu-toggle span {
+        display: block;
+        position: absolute;
+        left: 8px;
+        right: 8px;
+        height: 2px;
+        background: var(--dark);
+        border-radius: 2px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .menu-toggle span:nth-child(1) { top: 13px; }
+      .menu-toggle span:nth-child(2) { top: 19px; }
+      .menu-toggle span:nth-child(3) { top: 25px; }
+
+      .menu-toggle.active span:nth-child(1) {
+        top: 19px;
+        transform: rotate(45deg);
+      }
+
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-toggle.active span:nth-child(3) {
+        top: 19px;
+        transform: rotate(-45deg);
       }
 
       @media (max-width: 768px) {
@@ -228,22 +260,70 @@
         }
 
         .nav-links {
-          display: none;
-          position: absolute;
-          top: 70px;
-          left: 0;
+          position: fixed;
+          top: 0;
           right: 0;
+          bottom: 0;
+          width: min(320px, 80vw);
           flex-direction: column;
-          background: rgba(254, 241, 239, 0.98);
-          padding: 20px;
-          gap: 15px;
-          border-bottom: 1px solid var(--divider);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-          z-index: 99;
+          align-items: stretch;
+          background: var(--cream);
+          padding: 100px 0 40px;
+          gap: 0;
+          box-shadow: -8px 0 32px rgba(33, 30, 28, 0.15);
+          z-index: 100;
+          transform: translateX(100%);
+          transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+          overflow-y: auto;
         }
 
         .nav-links.active {
-          display: flex;
+          transform: translateX(0);
+        }
+
+        .nav-links li {
+          border-bottom: 1px solid var(--divider);
+        }
+
+        .nav-links a {
+          display: block;
+          padding: 18px 32px;
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0.3px;
+          border-left: 3px solid transparent;
+          transition: all 0.25s ease;
+        }
+
+        .nav-links a::after {
+          display: none;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+          background: rgba(249, 163, 146, 0.08);
+          border-left-color: var(--coral);
+          padding-left: 38px;
+        }
+
+        .nav-links a.active {
+          color: var(--coral);
+        }
+
+        .menu-overlay {
+          display: none;
+          position: fixed;
+          inset: 0;
+          background: rgba(33, 30, 28, 0.4);
+          backdrop-filter: blur(2px);
+          z-index: 98;
+          opacity: 0;
+          transition: opacity 0.35s ease;
+        }
+
+        .menu-overlay.active {
+          display: block;
+          opacity: 1;
         }
 
         .nav-cta {
@@ -1176,7 +1256,10 @@
         <a href="index.html" class="logo" style="text-decoration: none; cursor: pointer;">
           Serene <span style="color: var(--sage)">Vibrance</span>
         </a>
-        <button class="menu-toggle" aria-label="Menu">☰</button>
+        <button class="menu-toggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="menu-overlay"></div>
         <ul class="nav-links">
           <li><a href="facials.html">Facials</a></li>
           <li><a href="coaching.html">Coaching</a></li>
@@ -1719,17 +1802,26 @@
         // Mobile menu toggle
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinksMenu = document.querySelector('.nav-links');
+        const menuOverlay = document.querySelector('.menu-overlay');
+
+        function closeMenu() {
+          navLinksMenu.classList.remove('active');
+          menuToggle.classList.remove('active');
+          menuOverlay.classList.remove('active');
+        }
 
         if (menuToggle) {
           menuToggle.addEventListener('click', () => {
             navLinksMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
           });
+
+          menuOverlay.addEventListener('click', closeMenu);
 
           // Close menu when a link is clicked
           document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-              navLinksMenu.classList.remove('active');
-            });
+            link.addEventListener('click', closeMenu);
           });
         }
 
