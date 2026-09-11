@@ -190,6 +190,50 @@
         gap: 16px;
       }
 
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--dark);
+        padding: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+          order: 2;
+        }
+
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          background: rgba(254, 241, 239, 0.98);
+          padding: 20px;
+          gap: 15px;
+          border-bottom: 1px solid var(--divider);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          z-index: 99;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-cta {
+          display: none;
+        }
+
+        nav {
+          flex-wrap: wrap;
+        }
+      }
+
       .hero {
         position: relative;
         min-height: 80vh;
@@ -576,6 +620,7 @@
         <a href="index.html" class="logo" style="text-decoration: none; cursor: pointer;">
           Serene <span style="color: var(--sage)">Vibrance</span>
         </a>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="facials.html">Facials</a></li>
@@ -697,6 +742,24 @@
     </section>
 
     <script>
+      // Mobile menu toggle
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinksMenu = document.querySelector('.nav-links');
+
+      if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+          navLinksMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+          link.addEventListener('click', () => {
+            navLinksMenu.classList.remove('active');
+          });
+        });
+      }
+
+      // Active nav link indicator
       document.addEventListener('DOMContentLoaded', function() {
         const currentPage = window.location.pathname.split('/').pop() || 'index.html';
         const navLinks = document.querySelectorAll('.nav-links a');
