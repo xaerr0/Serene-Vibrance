@@ -4,16 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Intuitive Coaching — Serene Vibrance, Lafayette, CA</title>
+    <meta
+      name="description"
+      content="Intuitive coaching sessions with Serene Vibrance in Lafayette, CA. Get clear on your goals and start with a free intro session."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <style>
       :root {
         --coral: #f9a392;
         --coral-soft: #fab5aa;
+        --coral-strong: #c2486a;
+        --coral-strong-dark: #a83a58;
         --sage: #a68b9c;
         --sage-light: #c4b4bf;
         --cream: #fef1ef;
@@ -88,7 +107,7 @@
       }
 
       .btn-primary {
-        background: linear-gradient(135deg, var(--coral) 0%, var(--coral-soft) 100%);
+        background: linear-gradient(135deg, var(--coral-strong) 0%, var(--coral-strong-dark) 100%);
         color: white;
       }
 
@@ -99,7 +118,7 @@
 
       .btn-secondary {
         background: white;
-        color: var(--coral);
+        color: var(--coral-strong);
         border: 2px solid white;
       }
 
@@ -606,7 +625,7 @@
         padding-top: 30px;
         text-align: center;
         font-size: 13px;
-        color: #8b8377;
+        color: #948c7f;
       }
 
       @media (max-width: 768px) {
@@ -624,6 +643,10 @@
 
         .featured-image {
           height: 300px;
+        }
+
+        .featured-content {
+          text-align: center;
         }
 
         .hero { padding: 60px 20px; min-height: 70vh; }
@@ -673,7 +696,6 @@
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <div class="nav-cta">
-          <a href="index.html#contact" class="btn btn-secondary">Contact</a>
           <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Now</a>
         </div>
       </nav>

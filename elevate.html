@@ -4,18 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elevate Program — Serene Vibrance, Lafayette CA</title>
+    <meta
+      name="description"
+      content="Elevate is a 3-month personal-growth circle from Serene Vibrance in Lafayette, CA — retreats, coaching, facials, and community in one program."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
     <style>
       :root {
         --coral: #f9a392;
         --coral-soft: #fab5aa;
         --sage: #a68b9c;
         --sage-light: #c4b4bf;
+        --sage-strong: #7d6672;
         --cream: #fef1ef;
         --dark: #211e1c;
         --text-light: #6b6561;
@@ -96,7 +114,7 @@
       }
 
       .btn-primary {
-        background: var(--sage);
+        background: var(--sage-strong);
         color: white;
       }
 
@@ -107,7 +125,7 @@
 
       .btn-secondary {
         background: white;
-        color: var(--sage);
+        color: var(--sage-strong);
         border: 2px solid white;
         font-weight: 600;
       }
@@ -688,7 +706,7 @@
         padding-top: 30px;
         text-align: center;
         font-size: 13px;
-        color: #8b8377;
+        color: #948c7f;
       }
 
       @media (max-width: 768px) {
@@ -734,6 +752,13 @@
         .hero-ctas,
         .cta-buttons {
           flex-direction: column;
+          align-items: center;
+        }
+
+        .hero-ctas .btn,
+        .cta-buttons .btn {
+          width: 100%;
+          max-width: 300px;
         }
       }
     </style>
@@ -758,7 +783,6 @@
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <div class="nav-cta">
-          <a href="index.html#contact" class="btn btn-secondary">Contact</a>
           <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Now</a>
         </div>
       </nav>
