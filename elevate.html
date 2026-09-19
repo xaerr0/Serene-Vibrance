@@ -13,31 +13,33 @@
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@400;500;600;700&display=swap"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@400;500;600;700&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
     </noscript>
     <style>
       :root {
-        --coral: #f9a392;
-        --coral-soft: #fab5aa;
-        --sage: #a68b9c;
-        --sage-light: #c4b4bf;
-        --sage-strong: #7d6672;
-        --cream: #fef1ef;
-        --dark: #211e1c;
-        --text-light: #6b6561;
-        --divider: #e8d4cc;
+        --coral: #b5688c;
+        --coral-soft: #ce95ae;
+        --coral-strong: #7a3b58;
+        --coral-strong-dark: #5c2a42;
+        --sage: #b08a3e;
+        --sage-light: #e8cb86;
+        --sage-strong: #7a5e2a;
+        --cream: #f4eef0;
+        --dark: #2a2024;
+        --text-light: #6b5f66;
+        --divider: #e3d3d9;
       }
 
       * {
@@ -53,7 +55,7 @@
       body {
         background: var(--cream);
         color: var(--dark);
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         line-height: 1.6;
         -webkit-font-smoothing: antialiased;
       }
@@ -104,7 +106,7 @@
         padding: 14px 32px;
         border: none;
         border-radius: 4px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         font-size: 14px;
         font-weight: 600;
         text-decoration: none;
@@ -119,8 +121,8 @@
       }
 
       .btn-primary:hover {
-        background: var(--sage-light);
         transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(122, 94, 42, 0.3);
       }
 
       .btn-secondary {
@@ -146,7 +148,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(254, 241, 239, 0.95);
+        background: rgba(244, 238, 240, 0.95);
         backdrop-filter: blur(8px);
         z-index: -1;
       }
@@ -187,18 +189,20 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 0;
+        width: 100%;
         height: 2px;
         background: var(--coral);
-        transition: width 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
       }
 
       .nav-links a:hover::after {
-        width: 100%;
+        transform: scaleX(1);
       }
 
       .nav-links a.active::after {
-        width: 100%;
+        transform: scaleX(1);
         background: var(--coral);
       }
 
@@ -270,17 +274,21 @@
           background: var(--cream);
           padding: 0;
           gap: 0;
-          box-shadow: 0 12px 24px rgba(33, 30, 28, 0.12);
+          box-shadow: 0 12px 24px rgba(42, 32, 36, 0.12);
           z-index: 100;
-          max-height: 0;
-          overflow: hidden;
+          transform: translateY(-12px);
           opacity: 0;
-          transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+          visibility: hidden;
+          pointer-events: none;
+          transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, visibility 0s linear 0.35s;
         }
 
         .nav-links.active {
-          max-height: 500px;
+          transform: translateY(0);
           opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, visibility 0s linear 0s;
         }
 
         .nav-links li {
@@ -303,7 +311,7 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-          background: rgba(249, 163, 146, 0.08);
+          background: rgba(181, 104, 140, 0.08);
           border-left-color: var(--coral);
           padding-left: 38px;
         }
@@ -317,7 +325,7 @@
           position: fixed;
           inset: 0;
           top: 70px;
-          background: rgba(33, 30, 28, 0.3);
+          background: rgba(42, 32, 36, 0.3);
           z-index: 98;
           opacity: 0;
           transition: opacity 0.35s ease;
@@ -340,9 +348,7 @@
 
       .hero {
         padding: 120px 40px;
-        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
-        background-image: url('Images/treatment-room.jpg'), linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
-        background-blend-mode: overlay;
+        background-image: url('Images/treatment-room.jpg');
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -356,7 +362,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(0, 0, 0, 0.5);
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.4) 100%);
         z-index: 0;
       }
 
@@ -435,7 +441,7 @@
 
       .highlights {
         padding: 100px 40px;
-        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-strong) 100%);
         color: white;
       }
 
@@ -498,8 +504,17 @@
 
       .facilitators {
         padding: 100px 40px;
-        background: linear-gradient(135deg, var(--coral-soft) 0%, var(--coral) 100%);
+        background: linear-gradient(135deg, var(--coral-strong) 0%, var(--coral-strong-dark) 100%);
         color: white;
+      }
+
+      .facilitators .section-header h2,
+      .facilitators .section-header p {
+        color: white;
+      }
+
+      .facilitators .section-header p {
+        color: rgba(255, 255, 255, 0.95);
       }
 
       .facilitators-grid {
@@ -548,7 +563,7 @@
         background: var(--cream);
         padding: 32px;
         border-radius: 8px;
-        border-left: 4px solid var(--sage);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
       }
 
       .stars {
@@ -586,7 +601,7 @@
 
       .detail-section h3 {
         margin-bottom: 20px;
-        color: var(--sage);
+        color: var(--sage-strong);
       }
 
       .detail-section p {
@@ -595,7 +610,7 @@
 
       .cta-section {
         padding: 100px 40px;
-        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-strong) 100%);
         color: white;
         text-align: center;
       }
@@ -655,7 +670,7 @@
       .footer-col h4 {
         color: white;
         margin-bottom: 16px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -767,7 +782,7 @@
     <header>
       <nav>
         <a href="index.html" class="logo" style="text-decoration: none; cursor: pointer;">
-          Serene <span style="color: var(--sage)">Vibrance</span>
+          Serene <span style="color: var(--sage-strong)">Vibrance</span>
         </a>
         <button class="menu-toggle" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -777,7 +792,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="facials.html">Facials</a></li>
           <li><a href="coaching.html">Coaching</a></li>
-          <li><a href="waxing.html">Waxing</a></li>
           <li><a href="elevate.html">Elevate</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>

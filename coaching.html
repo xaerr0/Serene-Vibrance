@@ -13,32 +13,33 @@
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@400;500;600;700&display=swap"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@400;500;600;700&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
     </noscript>
     <style>
       :root {
-        --coral: #f9a392;
-        --coral-soft: #fab5aa;
-        --coral-strong: #c2486a;
-        --coral-strong-dark: #a83a58;
-        --sage: #a68b9c;
-        --sage-light: #c4b4bf;
-        --cream: #fef1ef;
-        --dark: #211e1c;
-        --text-light: #6b6561;
-        --divider: #e8d4cc;
+        --coral: #b5688c;
+        --coral-soft: #ce95ae;
+        --coral-strong: #7a3b58;
+        --coral-strong-dark: #5c2a42;
+        --sage: #b08a3e;
+        --sage-strong: #7a5e2a;
+        --sage-light: #e8cb86;
+        --cream: #f4eef0;
+        --dark: #2a2024;
+        --text-light: #6b5f66;
+        --divider: #e3d3d9;
       }
 
       * {
@@ -54,7 +55,7 @@
       body {
         background: var(--cream);
         color: var(--dark);
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         line-height: 1.6;
         -webkit-font-smoothing: antialiased;
       }
@@ -97,7 +98,7 @@
         padding: 14px 32px;
         border: none;
         border-radius: 4px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         font-size: 14px;
         font-weight: 600;
         text-decoration: none;
@@ -113,7 +114,7 @@
 
       .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 12px 24px rgba(249, 163, 146, 0.3);
+        box-shadow: 0 12px 24px rgba(181, 104, 140, 0.3);
       }
 
       .btn-secondary {
@@ -150,7 +151,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(254, 241, 239, 0.95);
+        background: rgba(244, 238, 240, 0.95);
         backdrop-filter: blur(8px);
         z-index: -1;
       }
@@ -191,18 +192,20 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 0;
+        width: 100%;
         height: 2px;
         background: var(--coral);
-        transition: width 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
       }
 
       .nav-links a:hover::after {
-        width: 100%;
+        transform: scaleX(1);
       }
 
       .nav-links a.active::after {
-        width: 100%;
+        transform: scaleX(1);
         background: var(--coral);
       }
 
@@ -274,17 +277,21 @@
           background: var(--cream);
           padding: 0;
           gap: 0;
-          box-shadow: 0 12px 24px rgba(33, 30, 28, 0.12);
+          box-shadow: 0 12px 24px rgba(42, 32, 36, 0.12);
           z-index: 100;
-          max-height: 0;
-          overflow: hidden;
+          transform: translateY(-12px);
           opacity: 0;
-          transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+          visibility: hidden;
+          pointer-events: none;
+          transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, visibility 0s linear 0.35s;
         }
 
         .nav-links.active {
-          max-height: 500px;
+          transform: translateY(0);
           opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, visibility 0s linear 0s;
         }
 
         .nav-links li {
@@ -307,7 +314,7 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-          background: rgba(249, 163, 146, 0.08);
+          background: rgba(181, 104, 140, 0.08);
           border-left-color: var(--coral);
           padding-left: 38px;
         }
@@ -321,7 +328,7 @@
           position: fixed;
           inset: 0;
           top: 70px;
-          background: rgba(33, 30, 28, 0.3);
+          background: rgba(42, 32, 36, 0.3);
           z-index: 98;
           opacity: 0;
           transition: opacity 0.35s ease;
@@ -351,7 +358,7 @@
         text-align: center;
         padding: 80px 40px;
         overflow: hidden;
-        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-light) 100%);
+        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-strong) 100%);
       }
 
       .hero::before {
@@ -434,7 +441,7 @@
 
       .service-card h3 {
         margin-bottom: 16px;
-        color: var(--sage);
+        color: var(--sage-strong);
       }
 
       .service-card p {
@@ -490,7 +497,7 @@
         background-size: cover;
         background-position: center;
         background-image: url("Images/treatment-room.jpg");
-        box-shadow: 0 20px 60px rgba(249, 163, 146, 0.15);
+        box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
       }
 
       .featured-content h2 {
@@ -505,7 +512,7 @@
 
       .cta-section {
         padding: 100px 40px;
-        background: linear-gradient(135deg, var(--coral) 0%, var(--coral-soft) 100%);
+        background: linear-gradient(135deg, var(--coral-strong) 0%, var(--coral-strong-dark) 100%);
         color: white;
         text-align: center;
         position: relative;
@@ -574,7 +581,7 @@
       .footer-col h4 {
         color: white;
         margin-bottom: 16px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -680,7 +687,7 @@
     <header>
       <nav>
         <a href="index.html" class="logo" style="text-decoration: none; cursor: pointer;">
-          Serene <span style="color: var(--sage)">Vibrance</span>
+          Serene <span style="color: var(--sage-strong)">Vibrance</span>
         </a>
         <button class="menu-toggle" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -690,7 +697,6 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="facials.html">Facials</a></li>
           <li><a href="coaching.html">Coaching</a></li>
-          <li><a href="waxing.html">Waxing</a></li>
           <li><a href="elevate.html">Elevate</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
@@ -706,8 +712,10 @@
         <p class="hero-subtitle">Transform Your Life From Within</p>
         <h1>Intuitive Coaching</h1>
         <p>
-          Real change goes deeper than skincare. In coaching sessions (virtual or in-person),
-          we'll explore what's holding you back, what you actually want, and how to get there.
+          This is coaching for the woman who knows she'll never stop growing. In
+          coaching sessions (virtual or in-person), we'll help you learn to listen
+          to — and trust — the wisdom that's already inside you, so you can show
+          up with clarity and intention in every part of your life.
         </p>
         <div class="hero-ctas">
           <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-secondary">Schedule a Session</a>
@@ -766,17 +774,23 @@
         <div class="featured-content">
           <h2>What Is Intuitive Coaching?</h2>
           <p>
-            Think of it as a conversation with someone who gets it. We don't just talk about surface-level
-            issues—we dig deeper to explore what's really holding you back from living the life you want.
+            Think of it as a conversation with someone who gets it — one centered in
+            the belief that when you slow down enough to feel into your body and get
+            centered, your own inner guidance is already there. Together, we'll follow
+            that guidance beneath the surface to uncover what's really holding you back
+            from living the life you want.
           </p>
           <p>
-            Whether you're stuck, overwhelmed, or just ready for something different, coaching can help you
-            get clarity, shift old patterns, and step into your power. Every session is personalized and
-            designed specifically for you.
+            Whether you're stuck, overwhelmed, or just ready for something different,
+            coaching can help you gain clarity, reconnect to your passion, and fall in
+            love with yourself and your life again. Every session — including guided
+            meditation, a healing Reiki treatment, and often home practices to support
+            you in between — is personalized and designed specifically for you.
           </p>
           <p style="margin-bottom: 0;">
-            Based on over 20 years of experience and training in holistic wellness, intuitive guidance,
-            and life coaching, Kristen brings real expertise and authentic care to every session.
+            With 18 years guiding women through inner growth and healing, and over 6
+            years as a group facilitator, Kristen brings real expertise and authentic
+            care to every session.
           </p>
         </div>
       </div>

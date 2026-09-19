@@ -13,33 +13,33 @@
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@400;500;600;700&display=swap"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@400;500;600;700&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Urbanist:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
     </noscript>
     <style>
       :root {
-        --coral: #f9a392;
-        --coral-soft: #fab5aa;
-        --coral-strong: #c2486a;
-        --coral-strong-dark: #a83a58;
-        --sage: #a68b9c;
-        --sage-strong: #7d6672;
-        --sage-light: #c4b4bf;
-        --cream: #fef1ef;
-        --dark: #211e1c;
-        --text-light: #6b6561;
-        --divider: #e8d4cc;
+        --coral: #b5688c;
+        --coral-soft: #ce95ae;
+        --coral-strong: #7a3b58;
+        --coral-strong-dark: #5c2a42;
+        --sage: #b08a3e;
+        --sage-strong: #7a5e2a;
+        --sage-light: #e8cb86;
+        --cream: #f4eef0;
+        --dark: #2a2024;
+        --text-light: #6b5f66;
+        --divider: #e3d3d9;
       }
 
       * {
@@ -55,7 +55,7 @@
       body {
         background: var(--cream);
         color: var(--dark);
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         line-height: 1.6;
         -webkit-font-smoothing: antialiased;
       }
@@ -110,7 +110,7 @@
         padding: 14px 32px;
         border: none;
         border-radius: 4px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         font-size: 14px;
         font-weight: 600;
         text-decoration: none;
@@ -130,7 +130,7 @@
 
       .btn-primary:hover {
         transform: translateY(-2px);
-        box-shadow: 0 12px 24px rgba(249, 163, 146, 0.3);
+        box-shadow: 0 12px 24px rgba(181, 104, 140, 0.3);
       }
 
       .btn-secondary {
@@ -168,7 +168,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: rgba(254, 241, 239, 0.95);
+        background: rgba(244, 238, 240, 0.95);
         backdrop-filter: blur(8px);
         z-index: -1;
       }
@@ -190,7 +190,7 @@
       }
 
       .logo span {
-        color: var(--sky);
+        color: var(--sage-strong);
       }
 
       .nav-links {
@@ -213,18 +213,20 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        width: 0;
+        width: 100%;
         height: 2px;
         background: var(--coral);
-        transition: width 0.3s ease;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
       }
 
       .nav-links a:hover::after {
-        width: 100%;
+        transform: scaleX(1);
       }
 
       .nav-links a.active::after {
-        width: 100%;
+        transform: scaleX(1);
         background: var(--coral);
       }
 
@@ -296,17 +298,21 @@
           background: var(--cream);
           padding: 0;
           gap: 0;
-          box-shadow: 0 12px 24px rgba(33, 30, 28, 0.12);
+          box-shadow: 0 12px 24px rgba(42, 32, 36, 0.12);
           z-index: 100;
-          max-height: 0;
-          overflow: hidden;
+          transform: translateY(-12px);
           opacity: 0;
-          transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+          visibility: hidden;
+          pointer-events: none;
+          transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, visibility 0s linear 0.35s;
         }
 
         .nav-links.active {
-          max-height: 500px;
+          transform: translateY(0);
           opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+          transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease, visibility 0s linear 0s;
         }
 
         .nav-links li {
@@ -329,7 +335,7 @@
 
         .nav-links a:hover,
         .nav-links a.active {
-          background: rgba(249, 163, 146, 0.08);
+          background: rgba(181, 104, 140, 0.08);
           border-left-color: var(--coral);
           padding-left: 38px;
         }
@@ -343,7 +349,7 @@
           position: fixed;
           inset: 0;
           top: 70px;
-          background: rgba(33, 30, 28, 0.3);
+          background: rgba(42, 32, 36, 0.3);
           z-index: 98;
           opacity: 0;
           transition: opacity 0.35s ease;
@@ -564,7 +570,7 @@
 
       .carousel-dots {
         position: absolute;
-        bottom: 20px;
+        bottom: 6px;
         left: 50%;
         transform: translateX(-50%);
         display: flex;
@@ -626,7 +632,7 @@
         background-size: cover;
         background-position: center;
         background-image: url("Images/treatment-room.jpg");
-        box-shadow: 0 20px 60px rgba(249, 163, 146, 0.15);
+        box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
       }
 
       .featured-content h2 {
@@ -663,7 +669,7 @@
         background: linear-gradient(
           135deg,
           var(--sage) 0%,
-          var(--sage-light) 100%
+          var(--sage-strong) 100%
         );
         color: white;
         position: relative;
@@ -724,8 +730,8 @@
         padding: 100px 40px;
         background: linear-gradient(
           135deg,
-          var(--coral-soft) 0%,
-          var(--coral) 100%
+          var(--coral-strong) 0%,
+          var(--coral-strong-dark) 100%
         );
         color: white;
         position: relative;
@@ -816,6 +822,39 @@
         font-weight: 600;
       }
 
+      .menu-column li[data-tooltip] {
+        cursor: help;
+      }
+
+      .menu-column li[data-tooltip]::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        left: 24px;
+        bottom: calc(100% + 8px);
+        z-index: 10;
+        width: max-content;
+        max-width: 260px;
+        padding: 10px 14px;
+        background: var(--dark);
+        color: white;
+        font-size: 13px;
+        line-height: 1.5;
+        border-radius: 6px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(4px);
+        transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+        pointer-events: none;
+      }
+
+      .menu-column li[data-tooltip]:hover::after,
+      .menu-column li[data-tooltip]:focus-visible::after {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
+
       @media (max-width: 768px) {
         .menu-list {
           grid-template-columns: 1fr;
@@ -833,8 +872,8 @@
         padding: 100px 40px;
         background: linear-gradient(
           135deg,
-          var(--sage-light) 0%,
-          var(--sage) 100%
+          var(--sage) 0%,
+          var(--sage-strong) 100%
         );
         color: white;
       }
@@ -872,7 +911,7 @@
         padding: 14px 16px;
         border: none;
         border-radius: 4px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         font-size: 14px;
         background: white;
         color: var(--dark);
@@ -1079,8 +1118,8 @@
         padding: 60px 40px;
         background: linear-gradient(
           135deg,
-          var(--coral) 0%,
-          var(--coral-soft) 100%
+          var(--coral-strong) 0%,
+          var(--coral-strong-dark) 100%
         );
         border-radius: 12px;
         color: white;
@@ -1116,7 +1155,7 @@
       .footer-col h4 {
         color: white;
         margin-bottom: 16px;
-        font-family: "Montserrat", sans-serif;
+        font-family: "Urbanist", sans-serif;
         font-size: 14px;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -1160,6 +1199,7 @@
 
       .social-links a:hover {
         background: var(--coral);
+        color: white;
       }
 
       .footer-bottom {
@@ -1218,7 +1258,7 @@
         }
 
         .carousel-dots {
-          bottom: 14px;
+          bottom: 4px;
         }
 
         h1 {
@@ -1300,7 +1340,7 @@
     <header>
       <nav>
         <a href="index.html" class="logo" style="text-decoration: none; cursor: pointer;">
-          Serene <span style="color: var(--sage)">Vibrance</span>
+          Serene <span style="color: var(--sage-strong)">Vibrance</span>
         </a>
         <button class="menu-toggle" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -1309,7 +1349,6 @@
         <ul class="nav-links">
           <li><a href="facials.html">Facials</a></li>
           <li><a href="coaching.html">Coaching</a></li>
-          <li><a href="waxing.html">Waxing</a></li>
           <li><a href="elevate.html">Elevate</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -1327,8 +1366,8 @@
 
     <section class="hero">
       <div class="hero-content">
-        <p class="hero-subtitle">A Spa Experience Like No Other</p>
-        <h1>Radiant Skin Starts Here</h1>
+        <p class="hero-subtitle">An Oasis from the Demands of Life</p>
+        <h1>Inner and Outer Glow Starts Here</h1>
         <p>
           Expert facials, intuitive coaching, and a sanctuary where you're truly
           seen. Let's bring out the best version of you.
@@ -1338,9 +1377,13 @@
             href="https://www.vagaro.com/serenevibrancelafayette/book-now"
             target="_blank"
             class="btn btn-primary"
-            >Book a Treatment</a
+            >Book a Service</a
           >
-          <a href="facials.html" class="btn btn-secondary">Explore Services</a>
+        </div>
+        <div class="hero-ctas" style="margin-top: 16px;">
+          <a href="facials.html" class="btn btn-secondary">Explore Facials</a>
+          <a href="coaching.html" class="btn btn-secondary">Explore Coaching</a>
+          <a href="elevate.html" class="btn btn-secondary">Explore Retreats</a>
         </div>
       </div>
     </section>
@@ -1350,8 +1393,9 @@
         <h2>Beauty Comes from Within</h2>
         <p>
           Real wellness isn't just about how you look. It's about how you feel.
-          That's why we combine expert skincare with intuitive coaching to help
-          you shine from the inside out.
+          That's why we offer two separate experiences: expert facials, and
+          intuitive coaching sessions, or experience both in the Women's
+          Self-Care Retreats, to help you shine from the inside out.
         </p>
         <p>
           Every facial is personalized. Every coaching session is a conversation.
@@ -1384,13 +1428,6 @@
               <a class="btn btn-secondary" href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" rel="noopener">View Facial Services</a>
             </div>
           </div>
-          <div class="carousel-slide" style="background-image:url('Images/service-waxes.jpg')">
-            <div class="slide-overlay">
-              <h3>Waxing</h3>
-              <p>Smooth skin, zero fuss. From brows to legs, we handle it all with care and precision so you can feel confident in your own skin.</p>
-              <a class="btn btn-secondary" href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" rel="noopener">View Waxing Services</a>
-            </div>
-          </div>
           <div class="carousel-slide" style="background-image:url('Images/service-additions.jpg')">
             <div class="slide-overlay">
               <h3>Add-Ons & Enhancements</h3>
@@ -1411,17 +1448,18 @@
         <div class="featured-content">
           <h2>The Ooo La La Facial</h2>
           <p>
-            Our most popular facial. In 60 minutes, you'll get professional-grade
+            Our most popular facial. In 2 hours, you'll get professional-grade
             treatments that smooth lines, brighten texture, and leave your skin
-            absolutely glowing. Perfect for anyone ready to love their complexion.
+            absolutely glowing. Perfect for anyone ready to be pampered from head
+            to complexion — and walk out glowing with confidence.
           </p>
           <ul class="service-highlights">
-            <li>Professional microdermabrasion</li>
-            <li>Deep extractions & hydration</li>
-            <li>Oxygen mist infusion</li>
+            <li>Zemits Hydro Facial AHA microdermabrasion</li>
+            <li>Gentle extractions & hydration</li>
+            <li>Oxygen Serum Infusion</li>
             <li>Microcurrent lifting therapy</li>
             <li>LED light therapy</li>
-            <li>Luxe moisturizing mask</li>
+            <li>Luxe mask</li>
           </ul>
           <a href="facials.html" class="btn btn-primary">View All Facials</a>
         </div>
@@ -1432,16 +1470,22 @@
       <div class="coaching-content">
         <h2>Intuitive Coaching</h2>
         <p>
-          Real change goes deeper than skincare. In coaching sessions (virtual or
-          in-person), we'll explore what's holding you back, what you actually
-          want, and how to get there. Think of it as a conversation with someone
-          who gets it.
+          This is for the woman who knows she'll never stop growing — who wants
+          to move through life with clarity, show up with intention in every
+          part of it, and use her time and energy in ways that actually align
+          with her values.
+        </p>
+        <p>
+          In coaching sessions (virtual or in-person), we'll create space for
+          exactly that: a soft place to land, where you get clear on how you
+          want to show up, claim your voice, and keep your eyes on your own
+          paper instead of carrying what isn't yours.
         </p>
         <p style="font-size: 16px">
-          Whether you're stuck, overwhelmed, or just ready for something different,
-          coaching can help. Start with a free intro session, then choose sessions
-          ($164 for 90 min) or a Half-Day Retreat that pairs coaching with a facial
-          (starting at $445).
+          Whether you're craving clarity, more confidence in your own voice, or
+          simply room to breathe, coaching can help. Start with a free intro
+          session, then choose sessions ($164 for 90 min) or a Half-Day Retreat
+          that pairs coaching with a facial (starting at $445).
         </p>
         <a
           href="https://www.vagaro.com/serenevibrancelafayette/book-now"
@@ -1458,8 +1502,8 @@
         <p>
           Ready for a deeper dive? The Elevate program is a 3-month personal-growth
           circle featuring two full-day retreats, weekly group calls, and support
-          for your next evolution. It's yoga, facials, coaching, and community all
-          in one transformative experience.
+          for your next evolution. It's facials, coaching, and community all in
+          one transformative experience.
         </p>
         <a
           href="elevate.html"
@@ -1481,25 +1525,25 @@
         <div class="menu-list">
           <div class="menu-column">
             <ul>
-              <li>New Client Facial (20% off)</li>
-              <li>Short and Sweet</li>
-              <li>Absolutely Lovely</li>
-              <li>Ooo La La (Our Signature)</li>
-              <li>Sweet Escape</li>
-              <li>Two-Hour Facial</li>
-              <li>90-Minute Facial</li>
-              <li>Microchanneling Deluxe Facial Renewal</li>
+              <li tabindex="0" data-tooltip="A welcoming first visit — a customized facial tailored to your skin's needs.">New Client Facial (20% off)</li>
+              <li tabindex="0" data-tooltip="A quick refresh for when you need a boost without the full treatment.">Short and Sweet</li>
+              <li tabindex="0" data-tooltip="A relaxing, mid-length facial with cleansing, exfoliation, and a nourishing mask.">Absolutely Lovely</li>
+              <li tabindex="0" data-tooltip="Our signature 2-hour treatment — the ultimate glow-up experience.">Ooo La La (Our Signature)</li>
+              <li tabindex="0" data-tooltip="A calming, restorative facial designed to melt away stress.">Sweet Escape</li>
+              <li tabindex="0" data-tooltip="An extended, deeply customized session for total relaxation and results.">Two-Hour Facial</li>
+              <li tabindex="0" data-tooltip="A comprehensive treatment with time for extra care where you need it.">90-Minute Facial</li>
+              <li tabindex="0" data-tooltip="Advanced microchanneling to renew texture and boost product absorption.">Microchanneling Deluxe Facial Renewal</li>
             </ul>
           </div>
           <div class="menu-column">
             <ul>
-              <li>Banished Clear Skin LED Facial</li>
-              <li>Renewed LED Facial</li>
-              <li>Ultra Lift Treatment</li>
-              <li>Organic Arctic Berry Peel</li>
-              <li>Men's Hardy Skin Treatment</li>
-              <li>Polished</li>
-              <li>Birthday Facial</li>
+              <li tabindex="0" data-tooltip="LED light therapy paired with a clarifying treatment for troubled skin.">Banished Clear Skin LED Facial</li>
+              <li tabindex="0" data-tooltip="LED light therapy to rejuvenate and refresh your complexion.">Renewed LED Facial</li>
+              <li tabindex="0" data-tooltip="A firming, lifting facial for a more sculpted, youthful look.">Ultra Lift Treatment</li>
+              <li tabindex="0" data-tooltip="A gentle, antioxidant-rich peel that brightens and renews.">Organic Arctic Berry Peel</li>
+              <li tabindex="0" data-tooltip="A facial designed for men's skin — deep clean, no fuss.">Men's Hardy Skin Treatment</li>
+              <li tabindex="0" data-tooltip="A resurfacing treatment for smoother, brighter skin.">Polished</li>
+              <li tabindex="0" data-tooltip="Celebrate your birthday with a pampering facial made just for you.">Birthday Facial</li>
             </ul>
           </div>
         </div>
@@ -1518,17 +1562,23 @@
         <div class="about-content">
           <h2>Meet Kristen Irene</h2>
           <p>
-            With over 20 years in the spa and wellness industry, I've built a
-            career around what I'm most passionate about: helping people feel seen,
-            supported, and radiant. My background includes 18 years as a women's
-            retreat facilitator, training at a holistic school in Maui, 2nd-degree
-            Reiki certification, and extensive medical spa technique training.
+            Ever since I was young, I've wanted to really know people — to connect
+            with them in a meaningful way. That's what has guided this entire career.
+            For the past 18 years, I've walked alongside women through their inner
+            growth and healing: leading women's circles for friends starting about
+            13 years ago, and in 2020 growing those circles into coaching groups
+            that became the retreats I lead today. Along the way, I trained at a
+            holistic school in Maui, deepened my Reiki practice (first degree at
+            seven, second-degree at twenty-one), and spent eight years refining my
+            skincare craft at a medical spa. I've had the joy of hearing hundreds of
+            women's deepest thoughts and most beautiful life stories along the way.
           </p>
           <p>
             Serene Vibrance brings together everything I've learned and loved: expert
-            skincare, energy work, and intuitive guidance. Every facial is personalized,
-            every coaching session is a real conversation, and you'll always feel cared
-            for. Walk in feeling stressed. Walk out feeling like yourself again.
+            skincare, energy work, and intuitive counseling. Every facial is personalized,
+            every coaching session meets you exactly where you are, and you'll always
+            feel cared for. Come in carrying it all. Leave replenished and glowing,
+            inside and out.
           </p>
         </div>
       </div>
