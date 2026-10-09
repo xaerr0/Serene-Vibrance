@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Prosperity Ritual — Serene Vibrance, Lafayette, CA</title>
+    <title>Prosperity Circle — Serene Vibrance, Lafayette, CA</title>
     <meta
       name="description"
-      content="The Prosperity Ritual with Kristen at Serene Vibrance — Wednesday, November 18 at 6:15 PM."
+      content="Prosperity Circle with Assiyah Rouhani and Kristen Diaz — an intimate women's evening on abundance, mindset, and frequency. Wednesday, November 18, 6:15–8:30 pm at Serene Vibrance Studio, Lafayette. $65, 12 spots."
     />
     <meta name="robots" content="noindex" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -398,6 +398,85 @@
         margin-right: auto;
       }
 
+      .hero p.hero-facilitators {
+        font-size: 15px;
+        font-style: italic;
+        margin-top: -24px;
+      }
+
+      .practices {
+        list-style: none;
+        counter-reset: practice;
+        max-width: 760px;
+        margin: 0 auto;
+      }
+
+      .practices li {
+        counter-increment: practice;
+        position: relative;
+        padding: 32px 0 32px 72px;
+        border-top: 1px solid var(--divider);
+      }
+
+      .practices li:last-child {
+        border-bottom: 1px solid var(--divider);
+      }
+
+      .practices li::before {
+        content: counter(practice, decimal-leading-zero);
+        position: absolute;
+        left: 0;
+        top: 30px;
+        font-family: "Lora", serif;
+        font-size: 28px;
+        font-style: italic;
+        color: var(--sage-strong);
+      }
+
+      .practices h3 {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+
+      .practices p {
+        line-height: 1.8;
+      }
+
+      .details {
+        padding: 100px 40px;
+        background: var(--cream);
+      }
+
+      .details .service-card {
+        background: white;
+      }
+
+      .details .service-card p {
+        margin-bottom: 12px;
+        color: var(--dark);
+      }
+
+      .details .service-card p.card-note {
+        font-size: 14px;
+        color: var(--text-light);
+        margin-bottom: 0;
+      }
+
+      .details .service-card a {
+        color: var(--coral-strong);
+      }
+
+      .gentle-note {
+        max-width: 640px;
+        margin: 48px auto 0;
+        text-align: center;
+        font-size: 15px;
+      }
+
+      .gentle-note strong {
+        color: var(--dark);
+      }
+
       .hero-ctas {
         display: flex;
         gap: 16px;
@@ -497,7 +576,7 @@
         height: 500px;
         background-size: cover;
         background-position: center;
-        background-image: url("Images/treatment-room.jpg");
+        background-image: url("Images/front-room.jpg");
         box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
       }
 
@@ -658,8 +737,21 @@
         }
 
         .hero { padding: 60px 20px; min-height: 70vh; }
-        .services, .featured-service, .cta-section {
+        .services, .featured-service, .details, .cta-section {
           padding: 60px 20px;
+        }
+
+        .practices li {
+          padding: 24px 0 24px 52px;
+        }
+
+        .practices li::before {
+          top: 22px;
+          font-size: 22px;
+        }
+
+        .practices h3 {
+          font-size: 19px;
         }
 
         .footer-content {
@@ -708,53 +800,141 @@
       </nav>
     </header>
 
-    <!-- DRAFT: placeholders marked TODO need Kristen's copy from her landing page before this page is linked anywhere -->
     <section class="hero">
       <div class="hero-content">
-        <p class="hero-subtitle">Wednesday, November 18 · 6:15 PM</p>
-        <h1>The Prosperity Ritual</h1>
-        <p>
-          <!-- TODO: replace with Kristen's description -->
-          An evening gathering with Kristen. Full details coming soon.
+        <p class="hero-subtitle">Wednesday, November 18 · 6:15 – 8:30 pm<br />Serene Vibrance Studio, Lafayette</p>
+        <h1>Prosperity Circle</h1>
+        <p>From the practical, to mindset, to frequency — become truly prosperous.</p>
+        <p class="hero-facilitators">
+          Led by Assiyah Rouhani, Clinical Hypnotherapist, and Kristen Diaz, Intuitive Life Coach
         </p>
         <div class="hero-ctas">
-          <!-- TODO: sign-up link -->
-          <a href="#" class="btn btn-secondary">Reserve Your Spot</a>
-          <a href="#details" class="btn btn-secondary">Event Details</a>
+          <!-- TODO: sign-up link (client email still says "[signup link]") -->
+          <a href="#" class="btn btn-secondary">Reserve your spot →</a>
+          <a href="#details" class="btn btn-secondary">The Details</a>
         </div>
       </div>
     </section>
 
-    <section class="services" id="details">
+    <section class="featured-service">
+      <div class="featured-wrapper">
+        <div class="featured-image" role="img" aria-label="A softly lit corner of the Serene Vibrance studio"></div>
+        <div class="featured-content">
+          <h2>An Invitation</h2>
+          <p>
+            When it comes to money, so many of us still feel a quiet tightening — that sense that there isn't quite
+            enough, or that you have to work day and night to make it. Whether you have money or you don't, a scarcity
+            mindset can still be running your life.
+          </p>
+          <p>
+            This circle is a soft place to land and practice something different. For one evening, we'll gather to feel
+            what abundance truly feels like, notice where scarcity has been running the show, and leave with a clear,
+            grounded plan for the six weeks ahead — right up to the end of the year. It's an evening to clear what's in
+            the way — and open to what's on its way.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="services">
       <div class="container">
         <div class="section-header">
-          <h2>Event Details</h2>
+          <h2>What We'll Do Together</h2>
+        </div>
+        <ol class="practices">
+          <li>
+            <h3>Live in your abundance.</h3>
+            <p>
+              Are you feeling your true abundance? Become a wealth magnet when you re-align your thinking to notice all
+              the ways wealth is showing up for you — in opportunities, good fortune, surprises, and acts of generosity.
+            </p>
+          </li>
+          <li>
+            <h3>Scarcity vs. abundance.</h3>
+            <p>
+              You'll learn to recognize where your mindset is serving you or blocking you and make a meaningful shift.
+            </p>
+          </li>
+          <li>
+            <h3>Find small ways to be of service.</h3>
+            <p>
+              Generosity keeps things flowing. We'll gather simple ideas — a glowing Google review for a business you
+              love, a generous testimonial, a love note to a friend, home-baked treats for your coworkers or a friend.
+            </p>
+          </li>
+          <li>
+            <h3>Align with the season of light.</h3>
+            <p>
+              We'll honor this powerful time of year, when Diwali, the Festival of Lights, is a sacred time in the Hindu
+              tradition to welcome in wealth and abundance — and open ourselves to receive it too.
+            </p>
+          </li>
+          <li>
+            <h3>Map your next six weeks.</h3>
+            <p>
+              You'll write out real, specific ideas to increase your income between now and the end of the year — and
+              share them with a circle of women who'll cheer you on.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="details" id="details">
+      <div class="container">
+        <div class="section-header">
+          <h2>The Details</h2>
         </div>
         <div class="services-grid">
           <div class="service-card">
             <h3>When</h3>
-            <p>Wednesday, November 18, 2026<br />6:15 PM</p>
+            <p>Wednesday, November 18<br />6:15 – 8:30 pm</p>
+            <p class="card-note">Please arrive about 10 minutes early to settle in.</p>
           </div>
           <div class="service-card">
             <h3>Where</h3>
-            <!-- TODO: confirm location (in person at the studio, or virtual?) -->
-            <p>Location to be announced</p>
+            <p>
+              Serene Vibrance Studio<br />
+              <a href="https://maps.google.com/?q=1043+Stuart+Street+%23140,+Lafayette,+CA+94549" target="_blank" rel="noopener">1043 Stuart Street #140<br />Lafayette, CA 94549</a>
+            </p>
+            <p class="card-note">
+              Free parking in the lot out front or on the street. My studio is in the center of the lot under the
+              overhang — the only unit on the ground floor.
+            </p>
           </div>
           <div class="service-card">
             <h3>Investment</h3>
-            <!-- TODO: price -->
-            <p>Pricing to be announced</p>
+            <p>$65</p>
+          </div>
+          <div class="service-card">
+            <h3>Spots</h3>
+            <p>Just 12 — this circle is kept intimate.</p>
+          </div>
+          <div class="service-card">
+            <h3>Bring</h3>
+            <p>A brand-new journal and pen</p>
+          </div>
+          <div class="service-card">
+            <h3>Wear</h3>
+            <p>Something gold or a touch of warm color — a nod to Diwali's celebration of light and abundance.</p>
           </div>
         </div>
+        <p class="gentle-note">
+          <strong>A gentle note:</strong> I often have essential oils diffusing. If you're sensitive to scents, just let
+          me know ahead of time.
+        </p>
       </div>
     </section>
 
     <section class="cta-section">
       <div class="cta-content">
-        <h2>Save Your Seat</h2>
-        <p>Questions? Email Kristen at serenevibrance@gmail.com.</p>
-        <!-- TODO: sign-up link -->
-        <a href="#" class="btn btn-secondary">Reserve Your Spot</a>
+        <h2>Leave Lighter, Clearer, and Abundant</h2>
+        <p>
+          Transformation happens when you make time for yourself. Feel what is possible when you see with more clarity,
+          change your mindset and frequency. Leave lighter, clearer, and feeling abundant in time for the holidays.
+        </p>
+        <!-- TODO: sign-up link (client email still says "[signup link]") -->
+        <a href="#" class="btn btn-secondary">Reserve your spot →</a>
       </div>
     </section>
 

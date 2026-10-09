@@ -50,7 +50,15 @@ Note: the Ooo La La facial content also appears on facials.html — update in bo
 - [x] Elevate: Kristen Diaz; 18 yrs interpersonal work / 13 yrs women's circles
 - [x] Elevate: Email Us lists Kristen Diaz + Assiyah Rouhani
 - [x] Contact: waxing → retreat; phone removed; email → serenevibrance@gmail.com; Discovery Call (Vagaro) added
-- [ ] prosperity.html is a DRAFT (noindex, not linked) — needs description, location, price, sign-up link
+- [x] prosperity.html is a DRAFT (noindex, not linked) — needs description, location, price, sign-up link (now filled in, see Email 4)
+
+## Email 4 — Prosperity Circle landing page
+
+- [x] prosperity.html: "The Prosperity Ritual" → "Prosperity Circle"; new subhead, date line (6:15 – 8:30 pm, studio), facilitators (Assiyah Rouhani + Kristen Diaz)
+- [x] Added Invitation section (front-room.jpg photo), "What We'll Do Together" (5 numbered items), The Details (When/Where/Investment $65/Spots 12/Bring/Wear) + gentle note on essential oils, closing paragraph
+- [x] Address links to Google Maps; title + meta description updated
+- [ ] **Sign-up link still missing**: client email literally says "[signup link]". Both "Reserve your spot →" buttons are `href="#"` (TODO comments)
+- [ ] Page is still `noindex` and not linked from nav/home. Ask whether to link it (e.g. home page banner) once sign-up link arrives
 - [ ] Testimonials still say "Kristen Irene"/"Irene" (client quotes, left as-is) — confirm with Kristen
 
 ## Color palette
