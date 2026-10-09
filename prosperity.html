@@ -8,7 +8,6 @@
       name="description"
       content="Prosperity Circle with Assiyah Rouhani and Kristen Diaz — an intimate women's evening on abundance, mindset, and frequency. Wednesday, November 18, 6:15–8:30 pm at Serene Vibrance Studio, Lafayette. $65, 12 spots."
     />
-    <meta name="robots" content="noindex" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -786,6 +785,37 @@
           max-width: 300px;
         }
       }
+      /* Desktop nav between the mobile breakpoint and full width: tighten so 7 links + Book Now fit on one line */
+      .nav-cta .btn {
+        white-space: nowrap;
+      }
+
+      @media (min-width: 769px) and (max-width: 1100px) {
+        nav {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+
+        .nav-links {
+          gap: 22px;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 900px) {
+        nav {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .nav-links {
+          gap: 14px;
+          font-size: 13px;
+        }
+
+        .nav-cta .btn {
+          padding: 12px 20px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -803,6 +833,7 @@
           <li><a href="facials.html">Facials</a></li>
           <li><a href="coaching.html">Coaching</a></li>
           <li><a href="elevate.html">Elevate</a></li>
+          <li><a href="prosperity.html">Prosperity</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
@@ -821,8 +852,7 @@
           Led by Assiyah Rouhani, Clinical Hypnotherapist, and Kristen Diaz, Intuitive Life Coach
         </p>
         <div class="hero-ctas">
-          <!-- TODO: sign-up link (client email still says "[signup link]") -->
-          <a href="#" class="btn btn-secondary">Reserve your spot →</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScJSa8Ad2oPpek5qxE2ecT38zvqvm9HTufFCh1s96sxI7mn0Q/viewform" target="_blank" rel="noopener" class="btn btn-secondary">Reserve your spot →</a>
           <a href="#details" class="btn btn-secondary">The Details</a>
         </div>
       </div>
@@ -949,8 +979,7 @@
           Transformation happens when you make time for yourself. Feel what is possible when you see with more clarity,
           change your mindset and frequency. Leave lighter, clearer, and feeling abundant in time for the holidays.
         </p>
-        <!-- TODO: sign-up link (client email still says "[signup link]") -->
-        <a href="#" class="btn btn-secondary">Reserve your spot →</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScJSa8Ad2oPpek5qxE2ecT38zvqvm9HTufFCh1s96sxI7mn0Q/viewform" target="_blank" rel="noopener" class="btn btn-secondary">Reserve your spot →</a>
       </div>
     </section>
 
@@ -1012,6 +1041,7 @@
           <a href="facials.html">Facials</a>
           <a href="coaching.html">Coaching</a>
           <a href="elevate.html">Elevate</a>
+          <a href="prosperity.html">Prosperity Circle</a>
         </div>
         <div class="footer-col">
           <h4>Offerings</h4>

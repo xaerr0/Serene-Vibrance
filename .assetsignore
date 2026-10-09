@@ -9,3 +9,4 @@ README.md
 .assetsignore
 .prettierc
 wrangler.jsonc
+client-feedback-checklist.md

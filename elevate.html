@@ -812,6 +812,37 @@
           max-width: 300px;
         }
       }
+      /* Desktop nav between the mobile breakpoint and full width: tighten so 7 links + Book Now fit on one line */
+      .nav-cta .btn {
+        white-space: nowrap;
+      }
+
+      @media (min-width: 769px) and (max-width: 1100px) {
+        nav {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+
+        .nav-links {
+          gap: 22px;
+        }
+      }
+
+      @media (min-width: 769px) and (max-width: 900px) {
+        nav {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .nav-links {
+          gap: 14px;
+          font-size: 13px;
+        }
+
+        .nav-cta .btn {
+          padding: 12px 20px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -829,6 +860,7 @@
           <li><a href="facials.html">Facials</a></li>
           <li><a href="coaching.html">Coaching</a></li>
           <li><a href="elevate.html">Elevate</a></li>
+          <li><a href="prosperity.html">Prosperity</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
@@ -1170,6 +1202,7 @@
           <a href="facials.html">Facials</a>
           <a href="coaching.html">Coaching</a>
           <a href="elevate.html">Elevate</a>
+          <a href="prosperity.html">Prosperity Circle</a>
         </div>
         <div class="footer-col">
           <h4>Offerings</h4>
