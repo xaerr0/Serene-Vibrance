@@ -358,14 +358,18 @@
         text-align: center;
         padding: 80px 40px;
         overflow: hidden;
-        background: linear-gradient(135deg, var(--sage) 0%, var(--sage-strong) 100%);
+        /* TEMP: stock photo (Pexels #4078516, free license) — swap for Kristen's own photo if she has one */
+        background-color: var(--sage-strong);
+        background-image: url("Images/prosperity-hero.jpg");
+        background-size: cover;
+        background-position: center 60%;
       }
 
       .hero::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: radial-gradient(circle at 0% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.45) 100%);
         z-index: 0;
       }
 
@@ -582,7 +586,9 @@
         height: 500px;
         background-size: cover;
         background-position: center;
-        background-image: url("Images/front-room.jpg");
+        /* TEMP: stock photo (Pexels #19342306, free license) */
+        background-image: url("Images/prosperity-journal.jpg");
+        background-position: center 70%;
         box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
       }
 
@@ -860,7 +866,7 @@
 
     <section class="featured-service">
       <div class="featured-wrapper">
-        <div class="featured-image" role="img" aria-label="A softly lit corner of the Serene Vibrance studio"></div>
+        <div class="featured-image" role="img" aria-label="A woman writing in her journal by candlelight"></div>
         <div class="featured-content">
           <h2>An Invitation</h2>
           <p>
