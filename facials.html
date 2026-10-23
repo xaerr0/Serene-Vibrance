@@ -358,9 +358,9 @@
         text-align: center;
         padding: 80px 40px;
         overflow: hidden;
-        background-image: url('Images/service-facials.jpg');
+        background-image: url('Images/facial-hero.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: center 40%;
         background-attachment: fixed;
       }
 
@@ -801,6 +801,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
     <header>
@@ -863,6 +864,27 @@
           </ul>
           <a href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" class="btn btn-primary">Book Now</a>
         </div>
+      </div>
+    </section>
+
+    <section class="media-section">
+      <div class="section-header">
+        <h2>It's About a Little Self-Care</h2>
+        <p>Step inside a facial with Kristen and hear what clients love about their time at Serene Vibrance.</p>
+      </div>
+      <div class="video-grid">
+        <figure class="video-card">
+          <video controls playsinline preload="none" poster="Videos/facial-self-care-poster.jpg">
+            <source src="Videos/facial-self-care.mp4" type="video/mp4" />
+          </video>
+          <figcaption>A facial with Kristen</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video controls playsinline preload="none" poster="Videos/facial-treatment-poster.jpg">
+            <source src="Videos/facial-treatment.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Treatment in progress</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -1004,5 +1026,6 @@
         &copy; 2026 Serene Vibrance. Spa & Intuitive Coaching for Whole-Self Wellness.
       </div>
     </footer>
+    <script src="media.js"></script>
   </body>
 </html>

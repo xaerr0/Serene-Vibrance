@@ -789,6 +789,11 @@
           grid-template-columns: 1fr;
         }
 
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+
         .section-header,
         .overview,
         .highlights,
@@ -844,6 +849,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
     <header>
@@ -958,6 +964,23 @@
       </div>
     </section>
 
+    <section class="media-section">
+      <div class="section-header">
+        <h2>Moments from the Circle</h2>
+        <p>A glimpse of the women, the space, and the connection that make Elevate what it is.</p>
+      </div>
+      <div class="slideshow" aria-roledescription="carousel" aria-label="Photos from Elevate gatherings">
+        <figure class="slideshow-slide active"><img src="Images/slides/group-women-studio.jpg" alt="Elevate women gathered together in the Serene Vibrance studio" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/group-meditation-circle.jpg" alt="Four women meditating together in a circle" loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/group-reservoir.jpg" alt="A group of women smiling together at Lafayette Reservoir" loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/group-four-women.jpg" alt="Four women embracing in the studio" loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/group-circle-conversation.jpg" alt="Women in conversation during a circle" loading="lazy" /></figure>
+        <button class="slideshow-arrow prev" aria-label="Previous photo">&#10094;</button>
+        <button class="slideshow-arrow next" aria-label="Next photo">&#10095;</button>
+      </div>
+      <div class="slideshow-dots"></div>
+    </section>
+
     <section class="whats-included">
       <div class="container">
         <div class="section-header">
@@ -998,6 +1021,9 @@
           <h2>Meet Your Guides</h2>
           <p>Experienced facilitators committed to your transformation</p>
         </div>
+        <figure class="guides-photo">
+          <img src="Images/kristen-assiyah-elevate.jpg" alt="Kristen Diaz and Assiyah Rouhani making a heart with their hands" loading="lazy" />
+        </figure>
         <div class="facilitators-grid">
           <div class="facilitator">
             <h3>Kristen Diaz</h3>
@@ -1019,6 +1045,27 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="media-section tinted">
+      <div class="section-header">
+        <h2>Inside the Retreat</h2>
+        <p>From setting up the space to the moments of transformation in it.</p>
+      </div>
+      <div class="video-grid">
+        <figure class="video-card">
+          <video controls playsinline preload="none" poster="Videos/elevate-retreat-poster.jpg">
+            <source src="Videos/elevate-retreat.mp4" type="video/mp4" />
+          </video>
+          <figcaption>The Elevate experience</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video controls playsinline preload="none" poster="Videos/retreat-setup-poster.jpg">
+            <source src="Videos/retreat-setup.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Kristen &amp; Assiyah setting up for retreat</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -1216,5 +1263,6 @@
         &copy; 2026 Serene Vibrance. Spa & Intuitive Coaching for Whole-Self Wellness.
       </div>
     </footer>
+    <script src="media.js"></script>
   </body>
 </html>
