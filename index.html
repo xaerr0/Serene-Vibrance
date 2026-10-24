@@ -380,10 +380,7 @@
         text-align: center;
         padding: 80px 40px;
         overflow: hidden;
-        background-image: url('Images/treatment-room.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        background: linear-gradient(135deg, var(--coral-strong) 0%, var(--coral-strong-dark) 100%);
       }
 
       .hero::before {
@@ -631,7 +628,8 @@
         height: 500px;
         background-size: cover;
         background-position: center;
-        background-image: url("Images/treatment-room.jpg");
+        background-image: url("Images/facial-head-massage.jpg");
+        background-position: center 30%;
         box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
       }
 
@@ -1366,6 +1364,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
     <header>
@@ -1396,7 +1395,7 @@
       </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero hero-split" style="--hero-photo: url('Images/home-hero-kristen.jpg'); --hero-photo-position: center 20%">
       <div class="hero-content">
         <p class="hero-subtitle">An Oasis from the Demands of Life</p>
         <h1>Inner and Outer Glow Starts Here</h1>
@@ -1446,7 +1445,7 @@
           </p>
         </div>
         <div class="carousel" id="services-carousel">
-          <div class="carousel-slide active" style="background-image:url('Images/service-coaching.jpg')">
+          <div class="carousel-slide active" style="background-image:url('Images/service-coaching-kristen.jpg'); background-position:center 30%">
             <div class="slide-overlay">
               <h3>Coaching</h3>
               <p>Get clear on your goals, shift old patterns, and step into your power. Coaching here is about real conversations that lead to real change.</p>
@@ -1460,7 +1459,7 @@
               <a class="btn btn-secondary" href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" rel="noopener">View Facial Services</a>
             </div>
           </div>
-          <div class="carousel-slide" style="background-image:url('Images/service-additions.jpg')">
+          <div class="carousel-slide" style="background-image:url('Images/service-additions-foot-soak.jpg'); background-position:center 40%">
             <div class="slide-overlay">
               <h3>Add-Ons & Enhancements</h3>
               <p>Make your experience even better. Add energy work, LED therapy, hand and foot treatments, or massage to any facial for the perfect customized session.</p>

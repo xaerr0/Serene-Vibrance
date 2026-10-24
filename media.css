@@ -1,5 +1,78 @@
 /* Shared photo slideshow + video gallery styles (used on facials, coaching, elevate, prosperity) */
 
+/* Split hero: text on the page's brand gradient at left, a portrait photo fading in at right.
+   Set the photo with style="--hero-photo: url(...)" on the section. */
+.hero.hero-split {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.hero.hero-split::before {
+  display: none;
+}
+
+.hero.hero-split::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  background-image: var(--hero-photo);
+  background-size: cover;
+  background-position: var(--hero-photo-position, center 25%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 25%, #000 50%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 25%, #000 50%);
+  z-index: 0;
+}
+
+.hero.hero-split .hero-content {
+  max-width: 540px;
+  margin-left: max(0px, calc((100% - 1120px) / 2));
+}
+
+.hero.hero-split p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero.hero-split .hero-ctas {
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .hero.hero-split {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero.hero-split::after {
+    width: 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .hero.hero-split::before {
+    display: block;
+    background: rgba(42, 32, 36, 0.55);
+    z-index: 1;
+  }
+
+  .hero.hero-split .hero-content {
+    z-index: 2;
+    margin-left: 0;
+  }
+
+  .hero.hero-split p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero.hero-split .hero-ctas {
+    justify-content: center;
+  }
+}
+
 .media-section {
   padding: 100px 40px;
   background: white;
