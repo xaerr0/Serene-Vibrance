@@ -8,6 +8,8 @@
       name="description"
       content="Serene Vibrance offers expert facials, intuitive coaching, and women's retreats in Lafayette, CA. Book your spa treatment or coaching session today."
     />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -142,6 +144,16 @@
       .btn-secondary:hover {
         background: rgba(255, 255, 255, 0.9);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .hero .btn-primary {
+        background: linear-gradient(135deg, var(--sage-light) 0%, var(--sage) 100%);
+        color: var(--dark);
+        font-weight: 600;
+      }
+
+      .hero .btn-primary:hover {
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
       }
 
       .hero .btn-secondary {
@@ -380,10 +392,7 @@
         text-align: center;
         padding: 80px 40px;
         overflow: hidden;
-        background-image: url('Images/treatment-room.jpg');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
+        background: linear-gradient(135deg, var(--coral-strong) 0%, var(--coral-strong-dark) 100%);
       }
 
       .hero::before {
@@ -631,7 +640,8 @@
         height: 500px;
         background-size: cover;
         background-position: center;
-        background-image: url("Images/treatment-room.jpg");
+        background-image: url("Images/facial-head-massage.jpg");
+        background-position: center 30%;
         box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
       }
 
@@ -985,7 +995,8 @@
         height: 500px;
         background-size: cover;
         background-position: center;
-        background-image: url("Images/kristen-about.jpg");
+        background-image: url("Images/kristen-about-4.jpg");
+        background-position: center 35%;
         order: 2;
       }
 
@@ -1152,7 +1163,7 @@
         margin-bottom: 40px;
       }
 
-      .footer-col h4 {
+      .footer-col h3 {
         color: white;
         margin-bottom: 16px;
         font-family: "Urbanist", sans-serif;
@@ -1198,7 +1209,7 @@
       }
 
       .social-links a:hover {
-        background: var(--coral);
+        background: var(--coral-strong);
         color: white;
       }
 
@@ -1366,6 +1377,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
     <header>
@@ -1396,7 +1408,7 @@
       </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero hero-split" style="--hero-photo: url('Images/home-hero-kristen.jpg'); --hero-photo-position: center 20%">
       <div class="hero-content">
         <p class="hero-subtitle">An Oasis from the Demands of Life</p>
         <h1>Inner and Outer Glow Starts Here</h1>
@@ -1446,22 +1458,21 @@
           </p>
         </div>
         <div class="carousel" id="services-carousel">
-          <div class="carousel-slide active" style="background-image:url('Images/service-coaching.jpg')">
+          <div class="carousel-slide active" style="background-image:url('Images/service-coaching-kristen.jpg'); background-position:center 30%">
             <div class="slide-overlay">
               <h3>Coaching</h3>
               <p>Get clear on your goals, shift old patterns, and step into your power. Coaching here is about real conversations that lead to real change.</p>
               <a class="btn btn-secondary" href="#coaching">View Coaching Services</a>
             </div>
           </div>
-          <!-- TEMP: stock photo (Pexels #3738349, free license) — swap for Kristen's own photo from Dropbox -->
-          <div class="carousel-slide" style="background-image:url('Images/service-facials-woman.jpg'); background-position:center 30%">
+          <div class="carousel-slide" style="background-image:url('Images/service-facials-kristen.jpg'); background-position:center 35%">
             <div class="slide-overlay">
               <h3>Facials</h3>
               <p>Let your skin breathe and glow. Whether you need deep hydration, anti-aging help, or just some pampering, we customize every facial to what your skin needs right now.</p>
               <a class="btn btn-secondary" href="https://www.vagaro.com/serenevibrancelafayette/book-now" target="_blank" rel="noopener">View Facial Services</a>
             </div>
           </div>
-          <div class="carousel-slide" style="background-image:url('Images/service-additions.jpg')">
+          <div class="carousel-slide" style="background-image:url('Images/service-additions-foot-soak.jpg'); background-position:center 40%">
             <div class="slide-overlay">
               <h3>Add-Ons & Enhancements</h3>
               <p>Make your experience even better. Add energy work, LED therapy, hand and foot treatments, or massage to any facial for the perfect customized session.</p>
@@ -1782,7 +1793,14 @@
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
             <h3>Location</h3>
-            <p>1043 Stuart Street #140<br>Lafayette, California 94549</p>
+            <p>
+              <a
+                href="https://www.google.com/maps/search/?api=1&amp;query=Serene+Vibrance+1043+Stuart+Street+%23140+Lafayette+CA+94549"
+                target="_blank"
+                rel="noopener"
+                >1043 Stuart Street #140<br>Lafayette, California 94549</a
+              >
+            </p>
           </div>
         </div>
 
@@ -1805,7 +1823,7 @@
     <footer>
       <div class="footer-content">
         <div class="footer-col">
-          <h4>Serene Vibrance</h4>
+          <h3>Serene Vibrance</h3>
           <p>Spa & Intuitive Coaching</p>
           <p>Lafayette, California</p>
           <div class="social-links">
@@ -1830,14 +1848,14 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h3>Services</h3>
           <a href="facials.html">Facials</a>
           <a href="coaching.html">Coaching</a>
           <a href="elevate.html">Elevate</a>
           <a href="prosperity.html">Prosperity Circle</a>
         </div>
         <div class="footer-col">
-          <h4>Offerings</h4>
+          <h3>Offerings</h3>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a href="index.html#newsletter">Newsletter</a>

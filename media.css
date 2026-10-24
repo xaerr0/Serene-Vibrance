@@ -1,0 +1,355 @@
+/* Shared photo slideshow + video gallery styles (used on facials, coaching, elevate, prosperity) */
+
+/* Split hero: text on the page's brand gradient at left, a portrait photo fading in at right.
+   Set the photo with style="--hero-photo: url(...)" on the section. */
+.hero.hero-split {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.hero.hero-split::before {
+  display: none;
+}
+
+.hero.hero-split::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 58%;
+  background-image: var(--hero-photo);
+  background-size: cover;
+  background-position: var(--hero-photo-position, center 25%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 25%, #000 50%);
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.5) 25%, #000 50%);
+  z-index: 0;
+}
+
+.hero.hero-split .hero-content {
+  max-width: 540px;
+  margin-left: max(0px, calc((100% - 1120px) / 2));
+}
+
+.hero.hero-split p {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero.hero-split .hero-ctas {
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .hero.hero-split {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero.hero-split::after {
+    width: 100%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .hero.hero-split::before {
+    display: block;
+    background: rgba(42, 32, 36, 0.55);
+    z-index: 1;
+  }
+
+  .hero.hero-split .hero-content {
+    z-index: 2;
+    margin-left: 0;
+  }
+
+  .hero.hero-split p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero.hero-split .hero-ctas {
+    justify-content: center;
+  }
+}
+
+.media-section {
+  padding: 100px 40px;
+  background: white;
+}
+
+.media-section.tinted {
+  background: linear-gradient(180deg, var(--cream) 0%, white 100%);
+}
+
+.media-section .section-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.media-section .section-header h2 {
+  margin-bottom: 16px;
+}
+
+.media-section .section-header p {
+  font-size: 18px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* Video gallery: portrait (9:16) tiles */
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-card {
+  flex: 0 1 270px;
+  margin: 0;
+}
+
+.video-card video,
+.video-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--dark);
+  box-shadow: 0 20px 50px rgba(181, 104, 140, 0.18);
+}
+
+.video-card figcaption {
+  margin-top: 14px;
+  text-align: center;
+  font-family: "Lora", serif;
+  font-size: 17px;
+  color: var(--dark);
+}
+
+/* Photo slideshow */
+.slideshow {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--dark);
+  box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
+}
+
+.slideshow.portrait {
+  max-width: 480px;
+  aspect-ratio: 4 / 5;
+  overflow: visible;
+}
+
+.slideshow.portrait .slideshow-slide {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Quote slides have text edge to edge, so keep the arrows outside the frame */
+.slideshow.portrait .slideshow-arrow.prev { left: -72px; }
+.slideshow.portrait .slideshow-arrow.next { right: -72px; }
+
+.slideshow-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.slideshow-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Blurred fill behind photos whose shape doesn't match the frame */
+.slideshow-slide::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  background-image: var(--slide-bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(28px) brightness(0.75);
+}
+
+.slideshow-slide img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slideshow-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  color: var(--dark);
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slideshow-arrow:hover,
+.slideshow-arrow:focus-visible {
+  background: white;
+}
+
+.slideshow-arrow.prev { left: 16px; }
+.slideshow-arrow.next { right: 16px; }
+
+.slideshow-dots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.slideshow-dot {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.slideshow-dot::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  background: var(--divider);
+  transition: background 0.3s ease;
+}
+
+.slideshow-dot.active::after,
+.slideshow-dot:hover::after {
+  background: var(--coral);
+}
+
+/* Photo + text side by side (e.g. Kristen & Assiyah) */
+.photo-split {
+  display: grid;
+  grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.photo-split img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
+}
+
+.photo-split h2 {
+  margin-bottom: 20px;
+}
+
+.photo-split p {
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+.photo-split p:last-child {
+  margin-bottom: 0;
+}
+
+.guides-photo {
+  max-width: 360px;
+  margin: 0 auto 56px;
+}
+
+.guides-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
+}
+
+@media (max-width: 768px) {
+  .media-section {
+    padding: 60px 20px;
+  }
+
+  .media-section .section-header {
+    margin-bottom: 40px;
+  }
+
+  .video-grid {
+    gap: 28px;
+  }
+
+  .video-card {
+    flex-basis: 100%;
+    max-width: 320px;
+  }
+
+  .slideshow-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .slideshow-arrow.prev { left: 10px; }
+  .slideshow-arrow.next { right: 10px; }
+
+  /* No room beside the frame on phones: tuck the arrows under it, next to the dots */
+  .slideshow.portrait .slideshow-arrow {
+    top: auto;
+    bottom: -52px;
+    transform: none;
+    background: white;
+    box-shadow: 0 4px 12px rgba(42, 32, 36, 0.12);
+  }
+
+  .slideshow.portrait .slideshow-arrow.prev { left: 0; }
+  .slideshow.portrait .slideshow-arrow.next { right: 0; }
+
+  .slideshow.portrait + .slideshow-dots {
+    margin-top: 24px;
+    padding: 0 48px;
+    gap: 2px;
+  }
+
+  .slideshow.portrait + .slideshow-dots .slideshow-dot {
+    width: 18px;
+  }
+
+  .slideshow.portrait + .slideshow-dots .slideshow-dot::after {
+    inset: 8px 5px;
+  }
+
+  .photo-split {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .photo-split img {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}

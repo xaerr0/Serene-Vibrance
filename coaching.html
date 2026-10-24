@@ -8,6 +8,8 @@
       name="description"
       content="Intuitive coaching sessions with Serene Vibrance in Lafayette, CA. Get clear on your goals and start with a free introductory session."
     />
+    <link rel="icon" href="favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -496,7 +498,7 @@
         height: 500px;
         background-size: cover;
         background-position: center;
-        background-image: url("Images/treatment-room.jpg");
+        background-image: url("Images/coaching-outdoor-session.jpg");
         box-shadow: 0 20px 60px rgba(181, 104, 140, 0.15);
       }
 
@@ -578,7 +580,7 @@
         margin-bottom: 40px;
       }
 
-      .footer-col h4 {
+      .footer-col h3 {
         color: white;
         margin-bottom: 16px;
         font-family: "Urbanist", sans-serif;
@@ -624,7 +626,8 @@
       }
 
       .social-links a:hover {
-        background: var(--coral);
+        background: var(--coral-strong);
+        color: white;
       }
 
       .footer-bottom {
@@ -713,6 +716,7 @@
         }
       }
     </style>
+    <link rel="stylesheet" href="media.css" />
   </head>
   <body>
     <header>
@@ -739,7 +743,7 @@
       </nav>
     </header>
 
-    <section class="hero">
+    <section class="hero hero-split" style="--hero-photo: url('Images/coaching-hero-kristen.jpg'); --hero-photo-position: 62% 25%">
       <div class="hero-content">
         <p class="hero-subtitle">Transform Your Life From Within</p>
         <h1>Intuitive Coaching</h1>
@@ -802,7 +806,7 @@
 
     <section class="featured-service">
       <div class="featured-wrapper">
-        <div class="featured-image"></div>
+        <div class="featured-image" role="img" aria-label="Kristen coaching a client outdoors at a picnic table"></div>
         <div class="featured-content">
           <h2>What Is Intuitive Coaching?</h2>
           <p>
@@ -812,20 +816,79 @@
             that guidance beneath the surface to uncover what's really holding you back
             from living the life you want.
           </p>
-          <p>
+          <p style="margin-bottom: 0;">
             Whether you're stuck, overwhelmed, or just ready for something different,
             coaching can help you gain clarity, reconnect to your passion, and fall in
             love with yourself and your life again. Every session — including guided
             meditation, a healing Reiki treatment, and often home practices to support
             you in between — is personalized and designed specifically for you.
           </p>
-          <p style="margin-bottom: 0;">
+        </div>
+      </div>
+    </section>
+
+    <section class="media-section tinted">
+      <div class="photo-split">
+        <img src="Images/kristen-white-laughing.jpg" alt="Kristen in white, laughing and looking off to the side" loading="lazy" />
+        <div>
+          <h2>Meet Your Coach</h2>
+          <p>
             With 18 years guiding women through inner growth and healing, and over 6
             years as a group facilitator, Kristen brings real expertise and authentic
             care to every session.
           </p>
         </div>
       </div>
+    </section>
+
+    <section class="media-section">
+      <div class="section-header">
+        <h2>Coaching in Action</h2>
+        <p>See what a session with Kristen feels like, and hear from the women she's worked with.</p>
+      </div>
+      <div class="video-grid">
+        <figure class="video-card">
+          <video controls playsinline preload="none" poster="Videos/what-do-you-do-as-a-life-coach-poster.jpg">
+            <source src="Videos/what-do-you-do-as-a-life-coach.mp4" type="video/mp4" />
+          </video>
+          <figcaption>What do you do as a life coach?</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video controls playsinline preload="none" poster="Videos/weighing-them-down-poster.jpg">
+            <source src="Videos/weighing-them-down.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Letting go of what's weighing you down</figcaption>
+        </figure>
+        <figure class="video-card">
+          <video controls playsinline preload="none" poster="Videos/client-testimonials-poster.jpg">
+            <source src="Videos/client-testimonials.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Client testimonials</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="media-section tinted">
+      <div class="section-header">
+        <h2>Things I'd Actually Say to You</h2>
+        <p>A few words from Kristen, as your life coach.</p>
+      </div>
+      <div class="slideshow portrait" aria-roledescription="carousel" aria-label="Things I'd actually say to you as your life coach">
+        <figure class="slideshow-slide active"><img src="Images/slides/coach-quote-01.jpg" alt="Things I'd actually say to you as your life coach" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-02.jpg" alt="Don't bulldoze your intuition by distrusting yourself. If you got a bad vibe, listen. You can have compassion for someone and still keep your distance." loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-03.jpg" alt="The more you accept your humanness — the full spectrum of emotions, the days you're cranky, unmotivated, overwhelmed, or down — the easier it becomes to extend that same grace to others. That's when your relationships begin to transform." loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-04.jpg" alt="The timelines society gives us for success and where we 'should' be don't always match the journey of the soul. Your life is unfolding with love in Divine timing." loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-05.jpg" alt="If you're consumed with regret over something you can't change, remember this: Hindsight is 20/20. If you could have done better in that moment, you would have. You did the best you could with what you knew, and your best was enough. What's meant to be will be." loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-06.jpg" alt="Don't wait to feel ready. They call it a leap of faith for a reason. Confidence doesn't come first — it comes after you do the thing." loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-07.jpg" alt="Any time you find yourself thinking or saying, 'I would never...' Pause. You're probably no longer in a space of unity, compassion, or understanding. That's your ego talking." loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-08.jpg" alt="Like attracts like. The more grateful you are for what you already have, the more life gives you to love and appreciate." loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-09.jpg" alt="Staying committed to your self-care and your inner world is one of the greatest gifts you can give the people you love. When you're the best version of yourself, you have so much more to give everyone around you." loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-10.jpg" alt="Perfection is the enemy of the good. Perfect isn't even on the table. Good is more than good enough." loading="lazy" /></figure>
+        <figure class="slideshow-slide"><img src="Images/slides/coach-quote-11.jpg" alt="Peace isn't found when life finally calms down. It's found by making space to feel your feelings, and doing practices that help you come back to center." loading="lazy" /></figure>
+        <button class="slideshow-arrow prev" aria-label="Previous slide">&#10094;</button>
+        <button class="slideshow-arrow next" aria-label="Next slide">&#10095;</button>
+      </div>
+      <div class="slideshow-dots"></div>
     </section>
 
     <section class="cta-section">
@@ -883,7 +946,7 @@
     <footer>
       <div class="footer-content">
         <div class="footer-col">
-          <h4>Serene Vibrance</h4>
+          <h3>Serene Vibrance</h3>
           <p>Spa & Intuitive Coaching</p>
           <p>Lafayette, California</p>
           <div class="social-links">
@@ -893,14 +956,14 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h3>Services</h3>
           <a href="facials.html">Facials</a>
           <a href="coaching.html">Coaching</a>
           <a href="elevate.html">Elevate</a>
           <a href="prosperity.html">Prosperity Circle</a>
         </div>
         <div class="footer-col">
-          <h4>Offerings</h4>
+          <h3>Offerings</h3>
           <a href="index.html#about">About</a>
           <a href="index.html#contact">Contact</a>
           <a href="index.html#newsletter">Newsletter</a>
@@ -911,5 +974,6 @@
         &copy; 2026 Serene Vibrance. Spa & Intuitive Coaching for Whole-Self Wellness.
       </div>
     </footer>
+    <script src="media.js"></script>
   </body>
 </html>
