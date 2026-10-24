@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "buried-raster",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-24T20:13:26.065Z",
+        "reason": "Claude: inactive .carousel-slide elements sit at opacity 0 by design for the crossfade; .active slide is opacity 1"
+      }
+    ]
+  }
+}
