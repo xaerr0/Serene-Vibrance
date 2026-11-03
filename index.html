@@ -1147,6 +1147,24 @@
         margin-bottom: 24px;
       }
 
+      .booking-actions {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn-outline-light {
+        background: transparent;
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.85);
+      }
+
+      .btn-outline-light:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-2px);
+      }
+
       /* Footer */
       footer {
         background: var(--dark);
@@ -1394,6 +1412,7 @@
           <li><a href="coaching.html">Coaching</a></li>
           <li><a href="elevate.html">Elevate</a></li>
           <li><a href="prosperity.html">Prosperity</a></li>
+          <li><a href="news.html">News</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1528,7 +1547,7 @@
         <p style="font-size: 16px">
           Whether you're craving clarity, more confidence in your own voice, or
           simply room to breathe, coaching can help. Start with a free introductory
-          session, then choose sessions ($164 for 90 min) or a Half-Day Retreat
+          session, then choose sessions ($110 for 60 min or $164 for 90 min) or a Half-Day Retreat
           that pairs coaching with a facial (starting at $445).
         </p>
         <a
@@ -1569,25 +1588,25 @@
         <div class="menu-list">
           <div class="menu-column">
             <ul>
-              <li tabindex="0" data-tooltip="A welcoming first visit — a customized facial tailored to your skin's needs.">New Client Facial (20% off)</li>
-              <li tabindex="0" data-tooltip="A quick refresh for when you need a boost without the full treatment.">Short and Sweet</li>
-              <li tabindex="0" data-tooltip="A relaxing, mid-length facial with cleansing, exfoliation, and a nourishing mask.">Absolutely Lovely</li>
+              <li tabindex="0" data-tooltip="Begins with a foot soak and a 30-minute consultation, then a facial customized to your skin and goals.">New Client Facial (20% off)</li>
+              <li tabindex="0" data-tooltip="Hydromicrodermabrasion, LED light and an oxygen infusion. A quick glow between monthly facials.">Short and Sweet</li>
+              <li tabindex="0" data-tooltip="A lifting, toning facial: hydrodermabrasion, a microcurrent lift, oxygen serum infusion and cryotherapy.">Absolutely Lovely</li>
               <li tabindex="0" data-tooltip="Our signature 2-hour treatment — the ultimate glow-up experience.">Ooo La La (Our Signature)</li>
-              <li tabindex="0" data-tooltip="A calming, restorative facial designed to melt away stress.">Sweet Escape</li>
-              <li tabindex="0" data-tooltip="An extended, deeply customized session for total relaxation and results.">Two-Hour Facial</li>
-              <li tabindex="0" data-tooltip="A comprehensive treatment with time for extra care where you need it.">90-Minute Facial</li>
-              <li tabindex="0" data-tooltip="Advanced microchanneling to renew texture and boost product absorption.">Microchanneling Deluxe Facial Renewal</li>
+              <li tabindex="0" data-tooltip="Dual exfoliation, extractions, a replenishing mask and a facial lift with a lifting device. A great first facial.">Sweet Escape</li>
+              <li tabindex="0" data-tooltip="Time for the works: a foot soak, longevity wrap and a facial with the add-ons that suit you best.">Two-Hour Facial</li>
+              <li tabindex="0" data-tooltip="Our most-booked time. Starts with a foot soak and longevity wrap, then the facial that's right for you.">90-Minute Facial</li>
+              <li tabindex="0" data-tooltip="Rebuilds youthful collagen with microchanneling, microcurrent and multiwave LED. Ideal for 40 and up.">Microchanneling Deluxe Facial Renewal</li>
             </ul>
           </div>
           <div class="menu-column">
             <ul>
-              <li tabindex="0" data-tooltip="LED light therapy paired with a clarifying treatment for troubled skin.">Banished Clear Skin LED Facial</li>
-              <li tabindex="0" data-tooltip="LED light therapy to rejuvenate and refresh your complexion.">Renewed LED Facial</li>
-              <li tabindex="0" data-tooltip="A firming, lifting facial for a more sculpted, youthful look.">Ultra Lift Treatment</li>
-              <li tabindex="0" data-tooltip="A gentle, antioxidant-rich peel that brightens and renews.">Organic Arctic Berry Peel</li>
+              <li tabindex="0" data-tooltip="For congested or blemish-prone skin: enzymes, deep extractions, high frequency and blue and red LED.">Banished Clear Skin LED Facial</li>
+              <li tabindex="0" data-tooltip="A relaxing anti-aging facial with gentle peels, a microcurrent lift, oxygen mist and LED light.">Renewed LED Facial</li>
+              <li tabindex="0" data-tooltip="Micropenning infuses anti-aging nutrients, followed by a microcurrent lift and a peptide firming mask.">Ultra Lift Treatment</li>
+              <li tabindex="0" data-tooltip="Hydrodermabrasion plus a blend of gentle organic peels. A brightening boost between facials.">Organic Arctic Berry Peel</li>
               <li tabindex="0" data-tooltip="A facial designed for men's skin — deep clean, no fuss.">Men's Hardy Skin Treatment</li>
-              <li tabindex="0" data-tooltip="A resurfacing treatment for smoother, brighter skin.">Polished</li>
-              <li tabindex="0" data-tooltip="Celebrate your birthday with a pampering facial made just for you.">Birthday Facial</li>
+              <li tabindex="0" data-tooltip="Hydrodermabrasion or dermaplane, oxygen mist, cryotherapy and a sculpting lift with a lifting device.">Polished</li>
+              <li tabindex="0" data-tooltip="Within a month of your birthday: 15% off any facial, plus a hand treatment and anti-aging eye treatment.">Birthday Facial</li>
             </ul>
           </div>
         </div>
@@ -1808,14 +1827,23 @@
           <h3>Book Your Appointment</h3>
           <p>
             Available for treatments and coaching sessions. Walk-ins by
-            appointment only.
+            appointment only. Treating someone you love? Send them an eGift card.
           </p>
-          <a
-            href="https://www.vagaro.com/serenevibrancelafayette/book-now"
-            target="_blank"
-            class="btn btn-secondary"
-            >Book Now on Vagaro</a
-          >
+          <div class="booking-actions">
+            <a
+              href="https://www.vagaro.com/serenevibrancelafayette/book-now"
+              target="_blank"
+              class="btn btn-secondary"
+              >Book Now on Vagaro</a
+            >
+            <a
+              href="https://squareup.com/gift/NDCQ0SVHMFKV9/order"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline-light"
+              >Buy an eGift Card</a
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -1859,11 +1887,13 @@
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <a href="index.html#newsletter">Newsletter</a>
+          <a href="news.html">News &amp; Updates</a>
           <a
             href="https://www.vagaro.com/serenevibrancelafayette/book-now"
             target="_blank"
             >Book Online</a
           >
+          <a href="https://squareup.com/gift/NDCQ0SVHMFKV9/order" target="_blank" rel="noopener">Gift Cards</a>
         </div>
       </div>
       <div class="footer-bottom">
